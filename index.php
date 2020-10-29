@@ -16,7 +16,7 @@ while($row=mysqli_fetch_assoc($result)){
 echo("<tr>");
     //print_r($row);
     echo("<tr>");
-    echo("<td>".$row['id']."</td><td>".$row['imie']."</td><td>".$row['dzial']."</td><td>".$row['zarobki']."</td>");
+    echo("<td>".$row['id_pracownicy']."</td><td>".$row['imie']."</td><td>".$row['dzial']."</td><td>".$row['zarobki']."</td>");
     echo("<tr>");
 echo("</tr>");
 
