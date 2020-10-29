@@ -1,8 +1,8 @@
 <?php
 $servername = "remotemysql.com";
-$username ="fv01d6C7kM";
-$password = "AfwVdCmSd5";
-$dbname = "fv01d6C7kM";
+$username ="i1g6dVaV2H";
+$password = "FLyEk1xoGO";
+$dbname = "i1g6dVaV2H";
 
 $conn= new mysqli($servername,$username,$password,$dbname);
 
@@ -16,7 +16,7 @@ while($row=mysqli_fetch_assoc($result)){
 echo("<tr>");
     //print_r($row);
     echo("<tr>");
-    echo("<td>".$row['id_pracownicy']."</td><td>".$row['imie']."</td><td>".$row['dzial']."</td><td>".$row['zarobki']."</td>");
+    echo("<td>".$row['id']."</td><td>".$row['imie']."</td><td>".$row['dzial']."</td><td>".$row['zarobki']."</td>");
     echo("<tr>");
 echo("</tr>");
 
