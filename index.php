@@ -9,6 +9,9 @@ $conn= new mysqli($servername,$username,$password,$dbname);
 $sql ="select * from pracownicy";
 echo("<h3>ZAD.1</h3>");
 $result = mysqli_query($conn, $sql);
+if ($conn->connect_error){
+    die("Connection failed: ". $conn->connect_error);
+}
 
 echo('<table border="1" class="tabela"');
 echo ("<tr><th>id</th><th>imie</th><th>dzial</th><th>zarobki</th></tr>");
