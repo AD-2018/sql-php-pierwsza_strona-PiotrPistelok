@@ -11,7 +11,7 @@ echo("<h3>ZAD.1</h3>");
 $sql ="select * from pracownicy";
 $result = mysqli_query($conn, $sql);
     if ($conn->query($sql)) {
-        echo ("ok")
+        echo ("ok""<br>")
     } else {
         echo "Error: " . $sql . "<br>" . $conn->error;
 }
