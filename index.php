@@ -10,7 +10,8 @@
     <a href="orgPacownicy.php">orgPracownicy</a>
     <a href="funcAgregujace.php">funcAgregujace</a>
 </div>
-
+</body>
+</html>
 <?php
 require_once("connect.php");
 
@@ -35,7 +36,6 @@ echo('<table border="1">');
     }
 
     echo('</table>');
-</body>
-</html>
+?>
 
 
