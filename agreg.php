@@ -1,3 +1,3 @@
 <?php
-echo "tu jestem:funkcje agregujące";
+echo ("tu jestem: agreg.php");
 ?>
