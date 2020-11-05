@@ -4,10 +4,9 @@
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
     <a href="https://github.com/AD-2018/sql-php-pierwsza_strona-PiotrPistelok">GitHub</a>
 <div class="nav">
-    <a href="orgPacownicy.php">orgPracownicy</a>
+    <a href="orgPacownicy.php">orgPracownicy</a>"<br>"
     <a href="funcAgregujace.php">funcAgregujace</a>
 </div>
 </body>
