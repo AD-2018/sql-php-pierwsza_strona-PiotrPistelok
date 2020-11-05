@@ -20,11 +20,11 @@ $sql = "SELECT * FROM pracownicy, organizacja where id_org=dzial";
 echo($sql);
 
 $result = mysqli_query($conn, $sql);
-//if ( $result) {
-//        echo "<li>ok";
-//    } else {
-//      echo "Error: " . $sql . "<br>" . mysqli_error($conn);
-//    }
+if ( $result) {
+        echo "ok";
+    } else {
+      echo "Error: " . $sql . "<li>" . mysqli_error($conn);
+    }
 
 echo('<table border="1">');
     echo('<th>Imie</th><th>zarobki</th><th>nazwa dzialu</th>');
