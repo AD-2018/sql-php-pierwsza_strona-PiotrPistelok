@@ -12,11 +12,6 @@ echo("<h3>ZAD.1</h3>");
 $sql ="select * from pracownicy";
     echo ("<li>".$sql):
 $result = $conn -> query($sql);
-    if ($conn->query($sql)) {
-        echo "ok";
-    } else {
-        echo "Error:".$sql."<br>".$conn->error;
-}
 echo('<table border="1" class="tabela"');
 echo ("<tr><th>id</th><th>imie</th><th>dzial</th><th>zarobki</th></tr>");
 while($row=$result->fetch_assoc()){
