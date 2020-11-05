@@ -16,10 +16,10 @@
 require_once("connect.php");
 
 echo("<br>Zad 1 <br>");
-//$sql = "SELECT * FROM pracownicy, organizacja where id_org=dzial";
-//echo($sql);
+$sql = "SELECT * FROM pracownicy, organizacja where id_org=dzial";
+echo($sql);
 
-//$result = mysqli_query($conn, $sql);
+$result = mysqli_query($conn, $sql);
 //if ( $result) {
 //        echo "<li>ok";
 //    } else {
