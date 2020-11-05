@@ -13,7 +13,7 @@ $sql ="select * from pracownicy";
     echo ("<li>".$sql):
 $result = mysqli_query($conn,$sql);
 if (mysqli_query($conn, $sql)) {
-  echo "New record created successfully;
+  echo "New record created successfully";
 } else {
   echo "Error: " . $sql . "<br>" . mysqli_error($conn);
 }
