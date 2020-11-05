@@ -1,33 +1,41 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-<link href="https://github.com/AD-2018/sql-php-pierwsza_strona-PiotrPistelok">github</a>
-    <h1>Piotr Pistelok nr 9</h1>
+
+    <a href="https://github.com/AD-2018/sql-php-pierwsza_strona-PiotrPistelok">GitHub</a>
+<div class="nav">
+    <a href="orgPacownicy.php">orgPracownicy</a>
+    <a href="funcAgregujace.php">funcAgregujace</a>
+</div>
+
 <?php
-include 'connect.php';
-echo("<h3>ZAD.1</h3>");
-$sql ="select * from pracownicy";
-    echo ("<li>".$sql):
-$result = mysqli_query($conn,$sql);
-if (mysqli_query($conn, $sql)) {
-  echo "New record created successfully";
-} else {
-  echo "Error: " . $sql . "<br>" . mysqli_error($conn);
-}
-    echo('<table border="1" class="tabela"');
-    echo ("<tr><th>id</th><th>imie</th><th>dzial</th><th>zarobki</th></tr>");
-while($row=$result->fetch_assoc()){
-     echo("<tr>");
-     //print_r($row);
-         echo("<tr>");
-         echo("<td>".$row['id_pracownicy']."</td><td>".$row['imie']."</td><td>".$row['dzial']."</td><td>".$row['zarobki']."</td>");
-         echo("<tr>");
-     echo("</tr>");
- }
-?>
+require_once("connect.php");
+
+echo("<br>Zad 1 <br>");
+$sql = "SELECT * FROM pracownicy, organizacja where id_org=dzial";
+echo($sql);
+
+$result = mysqli_query($conn, $sql);
+if ( $result) {
+        echo "<li>ok";
+    } else {
+      echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+    }
+
+echo('<table border="1">');
+    echo('<th>Imie</th><th>zarobki</th><th>nazwa dzialu</th>');
+
+    while($row=mysqli_fetch_assoc($result)){
+        echo('<tr>');
+        echo('<td>'.$row['imie'].'</td>'.'<td>'.$row['zarobki'].'</td><td>'.$row['nazwa_dzial'].'</td>');
+        echo('</tr>');
+    }
+
+    echo('</table>');
 </body>
 </html>
+
 
