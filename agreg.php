@@ -4,12 +4,12 @@
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
+        <a href="index.php">Strona główna</a>
 </body>
 </html>
 
 <?php
 require_once("connect.php");
-
 echo("<br>Zad 1 <br>");
 $sql = "SELECT * FROM pracownicy, organizacja where id_org=dzial";
 echo($sql);
