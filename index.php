@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link rel="stylesheet" href="mystyle.css">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
 <link href=https://github.com/AD-2018/sql-php-pierwsza_strona-PiotrPistelok>   
@@ -25,7 +25,6 @@ while($row=mysqli_fetch_assoc($result)){
         echo("<td>".$row['id_pracownicy']."</td><td>".$row['imie']."</td><td>".$row['dzial']."</td><td>".$row['zarobki']."</td>");
         echo("<tr>");
     echo("</tr>");
-
 }
 ?>
 </body>
