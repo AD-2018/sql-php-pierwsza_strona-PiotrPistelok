@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link rel="stylesheet" href="style.css">
 </head>
 <body>
 <link href="https://github.com/AD-2018/sql-php-pierwsza_strona-PiotrPistelok">github</a>
