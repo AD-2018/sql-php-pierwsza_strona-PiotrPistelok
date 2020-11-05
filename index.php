@@ -4,13 +4,13 @@
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<link href="https://github.com/AD-2018/sql-php-pierwsza_strona-PiotrPistel">ok</a>
-    <h1>Imie nazwisko nr dzi</h1>
+<link href="https://github.com/AD-2018/sql-php-pierwsza_strona-PiotrPistelok">github</a>
+    <h1>Piotr Pistelok nr 9</h1>
 <?php
 include 'connect.php';
 echo("<h3>ZAD.1</h3>");
 $sql ="select * from pracownicy";
-    echo ("<li>".$sql0:
+    echo ("<li>".$sql):
 $result = mysqli_query($conn, $sql);
     if ($conn->query($sql)) {
         echo "ok";
