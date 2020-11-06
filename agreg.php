@@ -8,8 +8,8 @@
     <h2>Piotr Pistelok nr 9</h2>
 <div class="nav">
     <a href="index.php">Strona główna</a>
-    <a href="Organizacja.php">Organizacja</a>
     <a href="OrgPracownicy.php">Organizacja Pracownicy</a>
+    <a href="Organizacja.php">Organizacja</a>
 </div>
 </body>
 </html>
