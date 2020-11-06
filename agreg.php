@@ -163,6 +163,62 @@ echo('<table border="1">');
         echo('</tr>');
     }
     echo('</table>');
+
+echo("<br>Ilość pracowników w poszczególnych działach<br>");
+$sql = "SELECT dzial,count(imie) as ilość_pracowników FROM pracownicy, organizacja where id_org=dzial group by dzial";
+echo($sql);
+$result = mysqli_query($conn, $sql);
+if ( $result) {
+        echo "<li>ok";
+    } else {
+      echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+    }
+echo('<table border="1">');
+    echo('<th>Dzial</th><th>Ilość pracowników</th>');
+    while($row=mysqli_fetch_assoc($result)){
+        echo('<tr>');
+        echo('<td>'.$row['dzial'].'</td><td>'.$row['ilość_pracowników'].'</td>');
+        echo('</tr>');
+    }
+    echo('</table>');
+
+echo("<br>Średnie zarobki w poszczególnych działach<br>");
+$sql = "SELECT dzial,avg(zarobki) as średnie_zarobki FROM pracownicy, organizacja where id_org=dzial group by dzial";
+echo($sql);
+$result = mysqli_query($conn, $sql);
+if ( $result) {
+        echo "<li>ok";
+    } else {
+      echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+    }
+echo('<table border="1">');
+    echo('<th>Dzial</th><th>Średnie zarobki</th>');
+    while($row=mysqli_fetch_assoc($result)){
+        echo('<tr>');
+        echo('<td>'.$row['dzial'].'</td><td>'.$row['średnie_zarobki'].'</td>');
+        echo('</tr>');
+    }
+    echo('</table>');
+
+echo("<br>Suma zarobków kobiet i mężczyzn<br>");
+$sql = "SELECT dzial,sum(zarobki) as suma_zarobków FROM pracownicy, organizacja where id_org=dzial group by dzial ";
+echo($sql);
+$result = mysqli_query($conn, $sql);
+if ( $result) {
+        echo "<li>ok";
+    } else {
+      echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+    }
+echo('<table border="1">');
+    echo('<th>Dzial</th><th>Suma zarobków</th>');
+    while($row=mysqli_fetch_assoc($result)){
+        echo('<tr>');
+        echo('<td>'.$row['dzial'].'</td><td>'.$row['suma_zarobków'].'</td>');
+        echo('</tr>');
+    }
+    echo('</table>');
+
+
 ?>
 
 
