@@ -4,12 +4,12 @@
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <a href="https://github.com/AD-2018/sql-php-pierwsza_strona-PiotrPistelok">GitHub</a>
+    <h2>Piotr Pistelok nr 9</h2>
 <div class="nav">
-        <a href="index.php">Strona główna</a>
-        <a href="https://github.com/AD-2018/sql-php-pierwsza_strona-PiotrPistelok">GitHub</a>
-        <a href="OrgPracownicy.php">Organizacja Pracownicy</a>
+    <a href="OrgPracownicy.php">Organizacja Pracownicy</a>
+    <a href="agreg.php">Funkcje Agregujące</a>
 </div>
-        <h2>Piotr Pistelok nr 9</h2>
 </body>
 </html>
 
@@ -109,6 +109,24 @@ echo('<table border="1">');
 
 echo("<br>Ilu jest pracowników<br>");
 $sql = "SELECT count(imie) as liczba_pracowników FROM pracownicy, organizacja where id_org=dzial";
+echo($sql);
+$result = mysqli_query($conn, $sql);
+if ( $result) {
+        echo "<li>ok";
+    } else {
+      echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+    }
+echo('<table border="1">');
+    echo('<th>Liczba pracowników</th>');
+    while($row=mysqli_fetch_assoc($result)){
+        echo('<tr>');
+        echo('<td>'.$row['liczba_pracowników'].'</td>');
+        echo('</tr>');
+    }
+    echo('</table>');
+
+echo("<br>Ile kobiet pracuje łącznie w działach 1 i 3<br>");
+$sql = "SELECT count(imie) as liczba_pracowników FROM pracownicy, organizacja where id_org=dzial and dzial in (1,3) and imie like '%a'";
 echo($sql);
 $result = mysqli_query($conn, $sql);
 if ( $result) {
