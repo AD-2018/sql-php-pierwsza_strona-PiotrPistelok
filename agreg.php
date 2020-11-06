@@ -4,7 +4,12 @@
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
+<div class="nav">
         <a href="index.php">Strona główna</a>
+        <a href="https://github.com/AD-2018/sql-php-pierwsza_strona-PiotrPistelok">GitHub</a>
+        <a href="OrgPracownicy.php">Organizacja Pracownicy</a>
+</div>
+        <h2>Piotr Pistelok nr 9</h2>
 </body>
 </html>
 
@@ -26,7 +31,7 @@ echo('<table border="1">');
 
     while($row=mysqli_fetch_assoc($result)){
         echo('<tr>');
-        echo('<td>'.$row['imie'].'</td>'.'<td>'.$row['suma_zarobków'].'</td><td>'.$row['nazwa_dzial'].'</td>');
+        echo('<td>'.$row['suma_zarobków'].'</td>');
         echo('</tr>');
     }
 
