@@ -144,4 +144,29 @@ echo('<table border="1">');
         echo('</tr>');
     }
     echo('</table>');
+    "<br>";
+    echo("GROUP BY");
+    "<br>";
+
+echo("<br>Ile kobiet pracuje łącznie w działach 1 i 3<br>");
+$sql = "SELECT dzial,sum(zarobki) as suma_zarobków FROM pracownicy, organizacja where id_org=dzial group by dzial";
+echo($sql);
+$result = mysqli_query($conn, $sql);
+if ( $result) {
+        echo "<li>ok";
+    } else {
+      echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+    }
+echo('<table border="1">');
+    echo('<th>Dzial</th><th>Suma zarobków</th>');
+    while($row=mysqli_fetch_assoc($result)){
+        echo('<tr>');
+        echo('<td>'.$rpow['dzial'].'</td><td>'.$row['suma_zarobków'].'</td>');
+        echo('</tr>');
+    }
+    echo('</table>');
 ?>
+
+
+
+
