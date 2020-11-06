@@ -11,7 +11,7 @@
 <?php
 require_once("connect.php");
 echo("<br>Zad 1 <br>");
-$sql = "SELECT * FROM pracownicy, organizacja where id_org=dzial";
+$sql = "SELECT sum(zarobki) as suma_zarobków FROM pracownicy, organizacja where id_org=dzial;";
 echo($sql);
 
 $result = mysqli_query($conn, $sql);
@@ -26,7 +26,7 @@ echo('<table border="1">');
 
     while($row=mysqli_fetch_assoc($result)){
         echo('<tr>');
-        echo('<td>'.$row['imie'].'</td>'.'<td>'.$row['zarobki'].'</td><td>'.$row['nazwa_dzial'].'</td>');
+        echo('<td>'.$row['imie'].'</td>'.'<td>'.$row['suma_zarobków'].'</td><td>'.$row['nazwa_dzial'].'</td>');
         echo('</tr>');
     }
 
