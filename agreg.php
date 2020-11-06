@@ -15,113 +15,113 @@
 
 <?php
 require_once("connect.php");
+
 echo("<br>Suma zarobków wszystkich pracowników<br>");
 $sql = "SELECT sum(zarobki) as suma_zarobków FROM pracownicy, organizacja where id_org=dzial;";
 echo($sql);
-
 $result = mysqli_query($conn, $sql);
 if ( $result) {
         echo "<li>ok";
     } else {
       echo "Error: " . $sql . "<br>" . mysqli_error($conn);
     }
-
 echo('<table border="1">');
     echo('<th>suma zarobków</th>');
-
     while($row=mysqli_fetch_assoc($result)){
         echo('<tr>');
         echo('<td>'.$row['suma_zarobków'].'</td>');
         echo('</tr>');
     }
-
     echo('</table>');
 
 echo("<br>Suma zarobków wszystkich kobiet<br>");
 $sql = "SELECT sum(zarobki) as suma_zarobków FROM pracownicy, organizacja where id_org=dzial and imie like '%a'";
 echo($sql);
-
 $result = mysqli_query($conn, $sql);
 if ( $result) {
         echo "<li>ok";
     } else {
       echo "Error: " . $sql . "<br>" . mysqli_error($conn);
     }
-
 echo('<table border="1">');
     echo('<th>suma zarobków</th>');
-
     while($row=mysqli_fetch_assoc($result)){
         echo('<tr>');
-        echo('<td>'.$row['suma_zarobkow'].'</td>');
+        echo('<td>'.$row['suma_zarobków'].'</td>');
         echo('</tr>');
     }
-
     echo('</table>');
 
 
 echo("<br>Suma zarobków mężczyzn pracujących w dziale 2 i 3<br>");
 $sql = "SELECT sum(zarobki) as suma_zarobków FROM pracownicy, organizacja where id_org=dzial and dzial in (2,3) and imie not like '%a'";
 echo($sql);
-
 $result = mysqli_query($conn, $sql);
 if ( $result) {
         echo "<li>ok";
     } else {
       echo "Error: " . $sql . "<br>" . mysqli_error($conn);
     }
-
 echo('<table border="1">');
     echo('<th>suma zarobków</th>');
-
     while($row=mysqli_fetch_assoc($result)){
         echo('<tr>');
         echo('<td>'.$row['suma_zarobków'].'</td>');
         echo('</tr>');
     }
-
     echo('</table>');
-echo("<br>Zad 1 <br>");
-$sql = "SELECT * FROM pracownicy, organizacja where id_org=dzial";
-echo($sql);
 
+echo("<br>Średnia zarobków pracowników z działu 4<br>");
+$sql = "SELECT avg(zarobki) as średnia_zarobków FROM pracownicy, organizacja where id_org=dzial and dzial=4";
+echo($sql);
 $result = mysqli_query($conn, $sql);
 if ( $result) {
         echo "<li>ok";
     } else {
       echo "Error: " . $sql . "<br>" . mysqli_error($conn);
     }
-
 echo('<table border="1">');
-    echo('<th>Imie</th><th>zarobki</th><th>nazwa dzialu</th>');
-
+    echo('<th>średnia zarobków</th>');
     while($row=mysqli_fetch_assoc($result)){
         echo('<tr>');
-        echo('<td>'.$row['imie'].'</td>'.'<td>'.$row['zarobki'].'</td><td>'.$row['nazwa_dzial'].'</td>');
+        echo('<td>'.$row['średnia_zarobków'].'</td>');
         echo('</tr>');
     }
-
     echo('</table>');
-echo("<br>Zad 1 <br>");
-$sql = "SELECT * FROM pracownicy, organizacja where id_org=dzial";
-echo($sql);
 
+echo("<br>Średnia zarobków mężczyzn z działu 1 i 2<br>");
+$sql = "SELECT avg(zarobki) as średnia_zarobków FROM pracownicy, organizacja where id_org=dzial and dzial in (1,2) and imie not like '%a'";
+echo($sql);
 $result = mysqli_query($conn, $sql);
 if ( $result) {
         echo "<li>ok";
     } else {
       echo "Error: " . $sql . "<br>" . mysqli_error($conn);
     }
-
 echo('<table border="1">');
-    echo('<th>Imie</th><th>zarobki</th><th>nazwa dzialu</th>');
-
+    echo('<th>Średnia zarobków</th>');
     while($row=mysqli_fetch_assoc($result)){
         echo('<tr>');
-        echo('<td>'.$row['imie'].'</td>'.'<td>'.$row['zarobki'].'</td><td>'.$row['nazwa_dzial'].'</td>');
+        echo('<td>'.$row['średnia_zarobków'].'</td>');
         echo('</tr>');
     }
-
     echo('</table>');
 
+echo("<br>Ilu jest pracowników<br>");
+$sql = "SELECT count(imie) as liczba_pracowników FROM pracownicy, organizacja where id_org=dzial;
+echo($sql);
+$result = mysqli_query($conn, $sql);
+if ( $result) {
+        echo "<li>ok";
+    } else {
+      echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+    }
+echo('<table border="1">');
+    echo('<th>Liczba pracowników</th>');
+    while($row=mysqli_fetch_assoc($result)){
+        echo('<tr>');
+        echo('<td>'.$row['liczba_pracowników'].'</td>');
+        echo('</tr>');
+    }
+    echo('</table>');
 ?>
