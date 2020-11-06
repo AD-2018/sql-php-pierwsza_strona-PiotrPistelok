@@ -18,8 +18,8 @@
 <?php
 require_once("connect.php");
 
-echo("<br>Suma zarobków wszystkich pracowników<br>");
-$sql = "SELECT sum(zarobki) as suma_zarobków FROM pracownicy, organizacja where id_org=dzial;";
+echo("<br>Pracownicy z nazwą działów<br>");
+$sql = "SELECT * FROM pracownicy, organizacja where id_org=dzial";
 echo($sql);
 $result = mysqli_query($conn, $sql);
 if ( $result) {
@@ -28,16 +28,16 @@ if ( $result) {
       echo "Error: " . $sql . "<br>" . mysqli_error($conn);
     }
 echo('<table border="1">');
-    echo('<th>suma zarobków</th>');
+    echo('<th>Imie</th><th>zarobki</th><th>nazwa dzialu</th>');
     while($row=mysqli_fetch_assoc($result)){
         echo('<tr>');
-        echo('<td>'.$row['suma_zarobków'].'</td>');
+        echo('<td>'.$row['imie'].'</td>'.'<td>'.$row['zarobki'].'</td><td>'.$row['nazwa_dzial'].'</td>');
         echo('</tr>');
     }
     echo('</table>');
 
-echo("<br>Suma zarobków wszystkich kobiet<br>");
-$sql = "SELECT sum(zarobki) as suma_zarobków FROM pracownicy, organizacja where id_org=dzial and imie like '%a'";
+echo("<br>Pracownicy tylko z działów 1 i 4<br>");
+$sql = "SELECT * FROM pracownicy, organizacja where id_org=dzial and (dzial=1 or dzial=4)";
 echo($sql);
 $result = mysqli_query($conn, $sql);
 if ( $result) {
@@ -46,17 +46,17 @@ if ( $result) {
       echo "Error: " . $sql . "<br>" . mysqli_error($conn);
     }
 echo('<table border="1">');
-    echo('<th>suma zarobków</th>');
+    echo('<th>Imie</th><th>zarobki</th><th>nazwa dzialu</th>');
+
     while($row=mysqli_fetch_assoc($result)){
         echo('<tr>');
-        echo('<td>'.$row['suma_zarobków'].'</td>');
+        echo('<td>'.$row['imie'].'</td>'.'<td>'.$row['zarobki'].'</td><td>'.$row['nazwa_dzial'].'</td>');
         echo('</tr>');
     }
     echo('</table>');
 
-
-echo("<br>Suma zarobków mężczyzn pracujących w dziale 2 i 3<br>");
-$sql = "SELECT sum(zarobki) as suma_zarobków FROM pracownicy, organizacja where id_org=dzial and dzial in (2,3) and imie not like '%a'";
+echo("<br>Lista kobiet z nazwami działów<br>");
+$sql = "SELECT * FROM pracownicy, organizacja where id_org=dzial and imie like '%a'";
 echo($sql);
 $result = mysqli_query($conn, $sql);
 if ( $result) {
@@ -64,17 +64,18 @@ if ( $result) {
     } else {
       echo "Error: " . $sql . "<br>" . mysqli_error($conn);
     }
+
 echo('<table border="1">');
-    echo('<th>suma zarobków</th>');
+    echo('<th>Imie</th><th>zarobki</th><th>nazwa dzialu</th>');
     while($row=mysqli_fetch_assoc($result)){
         echo('<tr>');
-        echo('<td>'.$row['suma_zarobków'].'</td>');
+        echo('<td>'.$row['imie'].'</td>'.'<td>'.$row['zarobki'].'</td><td>'.$row['nazwa_dzial'].'</td>');
         echo('</tr>');
     }
     echo('</table>');
 
-echo("<br>Średnia zarobków pracowników z działu 4<br>");
-$sql = "SELECT avg(zarobki) as średnia_zarobków FROM pracownicy, organizacja where id_org=dzial and dzial=4";
+echo("<br>Lista mężczyzn z nazwami działów<br>");
+$sql = "SELECT * FROM pracownicy, organizacja where id_org=dzial and imie not like '%a'";
 echo($sql);
 $result = mysqli_query($conn, $sql);
 if ( $result) {
@@ -83,16 +84,18 @@ if ( $result) {
       echo "Error: " . $sql . "<br>" . mysqli_error($conn);
     }
 echo('<table border="1">');
-    echo('<th>średnia zarobków</th>');
+    echo('<th>Imie</th><th>zarobki</th><th>nazwa dzialu</th>');
     while($row=mysqli_fetch_assoc($result)){
         echo('<tr>');
-        echo('<td>'.$row['średnia_zarobków'].'</td>');
+        echo('<td>'.$row['imie'].'</td>'.'<td>'.$row['zarobki'].'</td><td>'.$row['nazwa_dzial'].'</td>');
         echo('</tr>');
     }
     echo('</table>');
 
-echo("<br>Średnia zarobków mężczyzn z działu 1 i 2<br>");
-$sql = "SELECT avg(zarobki) as średnia_zarobków FROM pracownicy, organizacja where id_org=dzial and dzial in (1,2) and imie not like '%a'";
+echo("<h3> SORTOWANIE </h3>");
+
+echo("<br>Pracownicy posortowani malejąco<br>");
+$sql = "SELECT * FROM pracownicy, organizacja where id_org=dzial order by imie desc";
 echo($sql);
 $result = mysqli_query($conn, $sql);
 if ( $result) {
@@ -101,16 +104,16 @@ if ( $result) {
       echo "Error: " . $sql . "<br>" . mysqli_error($conn);
     }
 echo('<table border="1">');
-    echo('<th>Średnia zarobków</th>');
+    echo('<th>Imie</th><th>zarobki</th><th>nazwa dzialu</th>');
     while($row=mysqli_fetch_assoc($result)){
         echo('<tr>');
-        echo('<td>'.$row['średnia_zarobków'].'</td>');
+        echo('<td>'.$row['imie'].'</td>'.'<td>'.$row['zarobki'].'</td><td>'.$row['nazwa_dzial'].'</td>');
         echo('</tr>');
     }
     echo('</table>');
 
-echo("<br>Ilu jest pracowników<br>");
-$sql = "SELECT count(imie) as liczba_pracowników FROM pracownicy, organizacja where id_org=dzial";
+echo("<br>Pracownicy z działu 3 posortowani rosnąco po imieniu<br>");
+$sql = "SELECT * FROM pracownicy, organizacja where id_org=dzial and dzial=3 order by imie asc";
 echo($sql);
 $result = mysqli_query($conn, $sql);
 if ( $result) {
@@ -119,16 +122,16 @@ if ( $result) {
       echo "Error: " . $sql . "<br>" . mysqli_error($conn);
     }
 echo('<table border="1">');
-    echo('<th>Liczba pracowników</th>');
+    echo('<th>Imie</th><th>zarobki</th><th>nazwa dzialu</th>');
     while($row=mysqli_fetch_assoc($result)){
         echo('<tr>');
-        echo('<td>'.$row['liczba_pracowników'].'</td>');
+        echo('<td>'.$row['imie'].'</td>'.'<td>'.$row['zarobki'].'</td><td>'.$row['nazwa_dzial'].'</td>');
         echo('</tr>');
     }
     echo('</table>');
 
-echo("<br>Ile kobiet pracuje łącznie w działach 1 i 3<br>");
-$sql = "SELECT count(imie) as liczba_pracowników FROM pracownicy, organizacja where id_org=dzial and dzial in (1,3) and imie like '%a'";
+echo("<br>Kobiety posortowane rosnąco po imieniu<br>");
+$sql = "SELECT * FROM pracownicy, organizacja where id_org=dzial and imie like '%a' order by imie asc";
 echo($sql);
 $result = mysqli_query($conn, $sql);
 if ( $result) {
@@ -137,10 +140,49 @@ if ( $result) {
       echo "Error: " . $sql . "<br>" . mysqli_error($conn);
     }
 echo('<table border="1">');
-    echo('<th>Liczba pracowników</th>');
+    echo('<th>Imie</th><th>zarobki</th><th>nazwa dzialu</th>');
+
     while($row=mysqli_fetch_assoc($result)){
         echo('<tr>');
-        echo('<td>'.$row['liczba_pracowników'].'</td>');
+        echo('<td>'.$row['imie'].'</td>'.'<td>'.$row['zarobki'].'</td><td>'.$row['nazwa_dzial'].'</td>');
+        echo('</tr>');
+    }
+    echo('</table>');
+
+echo("<br>Kobiety z działu 1 i 3 posortowane rosnąco po zarobkach<br>");
+$sql = "SELECT * FROM pracownicy, organizacja where id_org=dzial and (imie like '%a') and (dzial=1 or dzial=3) order by imie asc";
+echo($sql);
+$result = mysqli_query($conn, $sql);
+if ( $result) {
+        echo "<li>ok";
+    } else {
+      echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+    }
+echo('<table border="1">');
+    echo('<th>Imie</th><th>zarobki</th><th>nazwa dzialu</th>');
+
+    while($row=mysqli_fetch_assoc($result)){
+        echo('<tr>');
+        echo('<td>'.$row['imie'].'</td>'.'<td>'.$row['zarobki'].'</td><td>'.$row['nazwa_dzial'].'</td>');
+        echo('</tr>');
+    }
+    echo('</table>');
+
+echo("<br>Mężczyźni posortowani rosnąco: po nazwie działu a następnie po wysokości zarobków<br>");
+$sql = "SELECT * FROM pracownicy, organizacja where id_org=dzial and imie not like '%a' order by nazwa_dzial asc, zarobki asc";
+echo($sql);
+$result = mysqli_query($conn, $sql);
+if ( $result) {
+        echo "<li>ok";
+    } else {
+      echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+    }
+echo('<table border="1">');
+    echo('<th>Imie</th><th>zarobki</th><th>nazwa dzialu</th>');
+
+    while($row=mysqli_fetch_assoc($result)){
+        echo('<tr>');
+        echo('<td>'.$row['imie'].'</td>'.'<td>'.$row['zarobki'].'</td><td>'.$row['nazwa_dzial'].'</td>');
         echo('</tr>');
     }
     echo('</table>');
