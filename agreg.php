@@ -108,7 +108,7 @@ echo('<table border="1">');
     echo('</table>');
 
 echo("<br>Ilu jest pracowników<br>");
-$sql = "SELECT count(imie) as liczba_pracowników FROM pracownicy, organizacja where id_org=dzial;
+$sql = "SELECT count(imie) as liczba_pracowników FROM pracownicy, organizacja where id_org=dzial";
 echo($sql);
 $result = mysqli_query($conn, $sql);
 if ( $result) {
