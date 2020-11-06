@@ -11,7 +11,7 @@
     <a href="OrgPracownicy.php">Organizacja Pracownicy</a>
     <a href="agreg.php">Funkcje Agregujące</a>
 </div>
-    <h2>Jestem w Organizacja</h2>
+    <h2>Jestem w Pracownicy</h2>
 </body>
 </html>
 
