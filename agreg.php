@@ -144,11 +144,9 @@ echo('<table border="1">');
         echo('</tr>');
     }
     echo('</table>');
-    "<br>";
-    echo("GROUP BY");
-    "<br>";
+    echo("<br>GROUP BY<br>");
 
-echo("<br>Ile kobiet pracuje łącznie w działach 1 i 3<br>");
+echo("<br>Suma zarobków w poszczególnych działach<br>");
 $sql = "SELECT dzial,sum(zarobki) as suma_zarobków FROM pracownicy, organizacja where id_org=dzial group by dzial";
 echo($sql);
 $result = mysqli_query($conn, $sql);
