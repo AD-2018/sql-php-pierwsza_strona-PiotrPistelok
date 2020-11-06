@@ -8,7 +8,7 @@
     <h2>Piotr Pistelok nr 9</h2>
 <div class="nav">
     <a href="index.php">Strona główna</a>
-    <a href="Organizacja.php">Organizacja</a>
+    <a href="pracownicy.php">Pracownicy</a>
     <a href="agreg.php">Funkcje Agregujące</a>
 </div>
     <h2>Jestem w Organizacja,pracownicy</h2>
