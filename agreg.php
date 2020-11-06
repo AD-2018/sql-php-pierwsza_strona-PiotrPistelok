@@ -27,7 +27,7 @@ if ( $result) {
     }
 
 echo('<table border="1">');
-    echo('<th>Imie</th><th>zarobki</th><th>nazwa dzialu</th>');
+    echo('<th>suma zarobków</th>');
 
     while($row=mysqli_fetch_assoc($result)){
         echo('<tr>');
@@ -49,7 +49,7 @@ if ( $result) {
     }
 
 echo('<table border="1">');
-    echo('<th>Imie</th><th>zarobki</th><th>nazwa dzialu</th>');
+    echo('<th>suma zarobków</th>');
 
     while($row=mysqli_fetch_assoc($result)){
         echo('<tr>');
@@ -58,6 +58,8 @@ echo('<table border="1">');
     }
 
     echo('</table>');
+
+
 echo("<br>Suma zarobków mężczyzn pracujących w dziale 2 i 3<br>");
 $sql = "SELECT sum(zarobki) as suma_zarobków FROM pracownicy, organizacja where id_org=dzial and dzial in (2,3) and imie not like '%a'";
 echo($sql);
@@ -70,7 +72,7 @@ if ( $result) {
     }
 
 echo('<table border="1">');
-    echo('<th>Imie</th><th>zarobki</th><th>nazwa dzialu</th>');
+    echo('<th>suma zarobków</th>');
 
     while($row=mysqli_fetch_assoc($result)){
         echo('<tr>');
