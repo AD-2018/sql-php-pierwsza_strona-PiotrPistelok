@@ -172,10 +172,82 @@ if ( $result) {
       echo "Error: " . $sql . "<br>" . mysqli_error($conn);
     }
 echo('<table border="1">');
-    echo('<th>Imię</th><th>Wiek</th><th>Nazwa Działu</th>');
+    echo('<th>Imię</th><th>Nazwa Działu</th><th>Wiek</th>');
     while($row=mysqli_fetch_assoc($result)){
         echo('<tr>');
-        echo("<td>".$row['imie']."</td><td>".$row['wiek']."</td><td>".$row['dzial']."</td>");     
+        echo("<td>".$row['imie']."</td><td>".$row['dzial']."</td><td>".$row['wiek']."</td>");     
+        echo('</tr>');
+    }
+    echo('</table>');
+  
+    echo("<br>Najmłodsi pracownicy z działu: handel i serwis<br>");
+    $sql ="select MIN(YEAR(CURDATE()) - YEAR(data_urodzenia)) as wiek from pracownicy,organizacja where id_org=dzial and dzial=1 or dzial=2 group by dzial"; 
+  echo($sql);
+$result = mysqli_query($conn, $sql);
+if ( $result) {
+        echo "<li>ok";
+    } else {
+      echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+    }
+echo('<table border="1">');
+    echo('<th>Nazwa Działu</th><th>Wiek</th>');
+    while($row=mysqli_fetch_assoc($result)){
+        echo('<tr>');
+        echo("<td>".$row['dzial']."</td><td>".$row['wiek']."</td>");     
+        echo('</tr>');
+    }
+    echo('</table>');
+  
+    echo("<br>Najmłodsi pracownicy z działu: handel i serwis<br>");
+    $sql ="select MIN(YEAR(CURDATE()) - YEAR(data_urodzenia)) as wiek from pracownicy,organizacja where id_org=dzial and dzial=1 or dzial=2 group by dzial"; 
+  echo($sql);
+$result = mysqli_query($conn, $sql);
+if ( $result) {
+        echo "<li>ok";
+    } else {
+      echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+    }
+echo('<table border="1">');
+    echo('<th>Imię</th><th>Nazwa Działu</th><th>Wiek</th>');
+    while($row=mysqli_fetch_assoc($result)){
+        echo('<tr>');
+        echo("<td>".$row['imie']."</td><td>".$row['dzial']."</td><td>".$row['wiek']."</td>");     
+        echo('</tr>');
+    }
+    echo('</table>');
+  
+    echo("<br>Długość życia pracowników w dniach<br>");
+    $sql ="select DATEDIFF(CURDATE(),data_urodzenia) as wiek from pracownicy,organizacja where id_org=dzial"; 
+  echo($sql);
+$result = mysqli_query($conn, $sql);
+if ( $result) {
+        echo "<li>ok";
+    } else {
+      echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+    }
+echo('<table border="1">');
+    echo('<th>Imię</th><th>Długość życia (dni)</th>');
+    while($row=mysqli_fetch_assoc($result)){
+        echo('<tr>');
+        echo("<td>".$row['imie']."</td><td>".$row['wiek']."</td>");     
+        echo('</tr>');
+    }
+    echo('</table>');
+  
+    echo("<br>Najstarszy mężczyzna<br>");
+    $sql ="select MAX(YEAR(CURDATE()) - YEAR(data_urodzenia)) as wiek from pracownicy,organizacja where id_org=dzial and imie not like '%a'"; 
+  echo($sql);
+$result = mysqli_query($conn, $sql);
+if ( $result) {
+        echo "<li>ok";
+    } else {
+      echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+    }
+echo('<table border="1">');
+    echo('<th>Imię</th><th>Dział</th><th<Wiek</th>');
+    while($row=mysqli_fetch_assoc($result)){
+        echo('<tr>');
+        echo("<td>".$row['imie']."</td><td>".$row['dzial']."</td><td>".$row['wiek']."</td>");     
         echo('</tr>');
     }
     echo('</table>');
