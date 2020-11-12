@@ -37,7 +37,7 @@ echo('<table border="1">');
     echo('</table>');
   
   echo("<br>Wiek poszczególnych pracowników (w latach) z działu serwis<br>");
-$sql ="select YEAR(curdate())-YEAR(data_urodzenia) AS wiek from pracownicy,organizacja where id_org=dzial and dzial=1";
+$sql ="select *,YEAR(curdate())-YEAR(data_urodzenia) AS wiek from pracownicy,organizacja where id_org=dzial and dzial=1";
 echo($sql);
 $result = mysqli_query($conn, $sql);
 if ( $result) {
@@ -235,7 +235,7 @@ echo('<table border="1">');
     echo('</table>');
   
     echo("<br>Najstarszy mężczyzna<br>");
-    $sql ="select imie,dzial,MAX(YEAR(CURDATE()) - YEAR(data_urodzenia)) as wiek from pracownicy,organizacja where id_org=dzial and imie not like '%a'"; 
+    $sql ="select *,MAX(YEAR(CURDATE()) - YEAR(data_urodzenia)) as wiek from pracownicy,organizacja where id_org=dzial and imie not like '%a'"; 
   echo($sql);
 $result = mysqli_query($conn, $sql);
 if ( $result) {
