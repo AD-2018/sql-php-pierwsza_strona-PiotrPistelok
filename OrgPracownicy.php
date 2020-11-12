@@ -13,8 +13,6 @@
     <a href="data_czas.php">Data i czas</a>
 </div>
     <h2>Jestem w Organizacja,pracownicy</h2>
-</body>
-</html>
 <?php
 require_once("connect.php");
 
@@ -187,3 +185,6 @@ echo('<table border="1">');
     }
     echo('</table>');
 ?>
+</body>
+</html>
+
