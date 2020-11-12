@@ -13,9 +13,6 @@
     <a href="Data_czas.php">Data i czas</a>
 </div>
     <h2>Jestem w Funkcjach agregujących</h2>
-</body>
-</html>
-
 <?php
 require_once("connect.php");
 
@@ -219,9 +216,10 @@ echo('<table border="1">');
         echo('</tr>');
     }
     echo('</table>');
-
-
 ?>
+</body>
+</html>
+
 
 
 
