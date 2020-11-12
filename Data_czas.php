@@ -127,7 +127,7 @@ echo('<table border="1">');
     echo('</table>');
   
     echo("<br>Średnia lat pracowników w poszczególnych działach<br>");
-$sql ="select AVG(YEAR(CURDATE()) - YEAR(data_urodzenia)) as srednia from pracownicy,organizacja where id_org=dzial group by dzial";
+$sql ="select dzial,AVG(YEAR(CURDATE()) - YEAR(data_urodzenia)) as srednia from pracownicy,organizacja where id_org=dzial group by dzial";
   echo($sql);
 $result = mysqli_query($conn, $sql);
 if ( $result) {
@@ -145,7 +145,7 @@ echo('<table border="1">');
     echo('</table>');
   
     echo("<br>Suma lat pracowników w poszczególnych działach<br>");
-    $sql ="select SUM(YEAR(CURDATE()) - YEAR(data_urodzenia)) as suma from pracownicy,organizacja where id_org=dzial group by dzial"; 
+    $sql ="select dzial,SUM(YEAR(CURDATE()) - YEAR(data_urodzenia)) as suma from pracownicy,organizacja where id_org=dzial group by dzial"; 
   echo($sql);
 $result = mysqli_query($conn, $sql);
 if ( $result) {
@@ -163,7 +163,7 @@ echo('<table border="1">');
     echo('</table>');
   
     echo("<br>Najstarsi pracownicy w każdym dziale<br>");
-    $sql ="select MAX(YEAR(CURDATE()) - YEAR(data_urodzenia)) as wiek from pracownicy,organizacja where id_org=dzial group by dzial"; 
+    $sql ="select imie,dzial,MAX(YEAR(CURDATE()) - YEAR(data_urodzenia)) as wiek from pracownicy,organizacja where id_org=dzial group by dzial"; 
   echo($sql);
 $result = mysqli_query($conn, $sql);
 if ( $result) {
@@ -181,7 +181,7 @@ echo('<table border="1">');
     echo('</table>');
   
     echo("<br>Najmłodsi pracownicy z działu: handel i serwis<br>");
-    $sql ="select MIN(YEAR(CURDATE()) - YEAR(data_urodzenia)) as wiek from pracownicy,organizacja where id_org=dzial and dzial=1 or dzial=2 group by dzial"; 
+    $sql ="select dzial,MIN(YEAR(CURDATE()) - YEAR(data_urodzenia)) as wiek from pracownicy,organizacja where id_org=dzial and dzial=1 or dzial=2 group by dzial"; 
   echo($sql);
 $result = mysqli_query($conn, $sql);
 if ( $result) {
@@ -199,7 +199,7 @@ echo('<table border="1">');
     echo('</table>');
   
     echo("<br>Najmłodsi pracownicy z działu: handel i serwis<br>");
-    $sql ="select MIN(YEAR(CURDATE()) - YEAR(data_urodzenia)) as wiek from pracownicy,organizacja where id_org=dzial and dzial=1 or dzial=2 group by dzial"; 
+    $sql ="select imie,dzial,MIN(YEAR(CURDATE()) - YEAR(data_urodzenia)) as wiek from pracownicy,organizacja where id_org=dzial and dzial=1 or dzial=2 group by dzial"; 
   echo($sql);
 $result = mysqli_query($conn, $sql);
 if ( $result) {
@@ -217,7 +217,7 @@ echo('<table border="1">');
     echo('</table>');
   
     echo("<br>Długość życia pracowników w dniach<br>");
-    $sql ="select DATEDIFF(CURDATE(),data_urodzenia) as wiek from pracownicy,organizacja where id_org=dzial"; 
+    $sql ="select imie,DATEDIFF(CURDATE(),data_urodzenia) as wiek from pracownicy,organizacja where id_org=dzial"; 
   echo($sql);
 $result = mysqli_query($conn, $sql);
 if ( $result) {
