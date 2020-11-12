@@ -1,6 +1,14 @@
-table, th, td {
+table {
   border: 1px solid black;
 }
 table {
   border-collapse: collapse;
+}
+th {
+  background-color: rgb(131, 122, 0);
+  color: white;
+  height: 50px;
+}
+td {
+  padding: 10px;
 }
