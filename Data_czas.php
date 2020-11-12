@@ -73,7 +73,7 @@ echo('<table border="1">');
     echo('</table>');
   
   echo("<br>Suma lat pracowników z działu handel<br>");
-$sql ="select *,SUM(YEAR(CURDATE()) - YEAR(data_urodzenia)) as Suma from pracownicy,organizacja where id_org=dzial and dzial=2";
+$sql ="select SUM(YEAR(CURDATE()) - YEAR(data_urodzenia)) as Suma from pracownicy,organizacja where id_org=dzial and dzial=2";
 echo($sql);
 $result = mysqli_query($conn, $sql);
 if ( $result) {
@@ -91,7 +91,7 @@ echo('<table border="1">');
     echo('</table>');
   
   echo("<br>Suma lat kobiet<br>");
-    $sql ="select *,SUM(YEAR(CURDATE()) - YEAR(data_urodzenia)) as Suma from pracownicy,organizacja where id_org=dzial and imie like'%a'"; 
+    $sql ="select SUM(YEAR(CURDATE()) - YEAR(data_urodzenia)) as Suma from pracownicy,organizacja where id_org=dzial and imie like'%a'"; 
 echo($sql);
 $result = mysqli_query($conn, $sql);
 if ( $result) {
@@ -109,7 +109,7 @@ echo('<table border="1">');
     echo('</table>');
   
     echo("<br>Suma lat mężczyzn<br>");
-$sql ="select *,SUM(YEAR(CURDATE()) - YEAR(data_urodzenia)) as Suma from pracownicy,organizacja where id_org=dzial and imie not like'%a'"; 
+$sql ="select SUM(YEAR(CURDATE()) - YEAR(data_urodzenia)) as Suma from pracownicy,organizacja where id_org=dzial and imie not like'%a'"; 
   echo($sql);
 $result = mysqli_query($conn, $sql);
 if ( $result) {
@@ -127,7 +127,7 @@ echo('<table border="1">');
     echo('</table>');
   
     echo("<br>Średnia lat pracowników w poszczególnych działach<br>");
-$sql ="select *,AVG(YEAR(CURDATE()) - YEAR(data_urodzenia)) as srednia from pracownicy,organizacja where id_org=dzial group by dzial";
+$sql ="select AVG(YEAR(CURDATE()) - YEAR(data_urodzenia)) as srednia from pracownicy,organizacja where id_org=dzial group by dzial";
   echo($sql);
 $result = mysqli_query($conn, $sql);
 if ( $result) {
@@ -145,7 +145,7 @@ echo('<table border="1">');
     echo('</table>');
   
     echo("<br>Suma lat pracowników w poszczególnych działach<br>");
-    $sql ="select *,SUM(YEAR(CURDATE()) - YEAR(data_urodzenia)) as suma from pracownicy,organizacja where id_org=dzial group by dzial"; 
+    $sql ="select SUM(YEAR(CURDATE()) - YEAR(data_urodzenia)) as suma from pracownicy,organizacja where id_org=dzial group by dzial"; 
   echo($sql);
 $result = mysqli_query($conn, $sql);
 if ( $result) {
@@ -163,7 +163,7 @@ echo('<table border="1">');
     echo('</table>');
   
     echo("<br>Najstarsi pracownicy w każdym dziale<br>");
-    $sql ="select *,MAX(YEAR(CURDATE()) - YEAR(data_urodzenia)) as wiek from pracownicy,organizacja where id_org=dzial group by dzial"; 
+    $sql ="select MAX(YEAR(CURDATE()) - YEAR(data_urodzenia)) as wiek from pracownicy,organizacja where id_org=dzial group by dzial"; 
   echo($sql);
 $result = mysqli_query($conn, $sql);
 if ( $result) {
