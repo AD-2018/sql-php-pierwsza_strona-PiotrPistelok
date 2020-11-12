@@ -193,7 +193,7 @@ echo('<table border="1">');
     echo('<th>Nazwa Działu</th><th>Wiek</th>');
     while($row=mysqli_fetch_assoc($result)){
         echo('<tr>');
-        echo("<td>".$row['dzial']."</td><td>".$row['wiek']."</td>");     
+        echo("<td>".$row['nazwa_dzial']."</td><td>".$row['wiek']."</td>");     
         echo('</tr>');
     }
     echo('</table>');
@@ -211,7 +211,7 @@ echo('<table border="1">');
     echo('<th>Imię</th><th>Nazwa Działu</th><th>Wiek</th>');
     while($row=mysqli_fetch_assoc($result)){
         echo('<tr>');
-        echo("<td>".$row['imie']."</td><td>".$row['dzial']."</td><td>".$row['wiek']."</td>");     
+        echo("<td>".$row['imie']."</td><td>".$row['nazwa_dzial']."</td><td>".$row['wiek']."</td>");     
         echo('</tr>');
     }
     echo('</table>');
