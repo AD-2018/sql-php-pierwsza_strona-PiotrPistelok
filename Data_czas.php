@@ -14,3 +14,5 @@
 </div>
     <h2>Jestem w data i czasy</h2>
 <?php>
+    echo ("hej");
+?>
