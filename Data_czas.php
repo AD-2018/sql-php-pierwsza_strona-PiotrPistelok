@@ -145,7 +145,7 @@ echo('<table border="1">');
     echo('</table>');
   
     echo("<br>Suma lat pracowników w poszczególnych działach<br>");
-    $sql ="select dzial,SUM(YEAR(CURDATE()) - YEAR(data_urodzenia)) as suma from pracownicy,organizacja where id_org=dzial group by dzial"; 
+    $sql ="select dzial,nazwa_dzial,SUM(YEAR(CURDATE()) - YEAR(data_urodzenia)) as suma from pracownicy,organizacja where id_org=dzial group by dzial,nazwa_dzial"; 
   echo($sql);
 $result = mysqli_query($conn, $sql);
 if ( $result) {
@@ -154,10 +154,10 @@ if ( $result) {
       echo "Error: " . $sql . "<br>" . mysqli_error($conn);
     }
 echo('<table border="1">');
-    echo('<th>Dział</th><th>Suma</th>');
+    echo('<th>Dział</th><th>Nazwa Działu</th><th>Suma</th>');
     while($row=mysqli_fetch_assoc($result)){
         echo('<tr>');
-        echo("<td>".$row['dzial']."</td><td>".$row['suma']."</td>");  
+        echo("<td>".$row['dzial']."</td><td>".$row['nazwa_dzial']."</td><td>".$row['suma']."</td>");  
         echo('</tr>');
     }
     echo('</table>');
