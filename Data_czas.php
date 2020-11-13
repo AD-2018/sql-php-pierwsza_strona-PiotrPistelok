@@ -199,7 +199,7 @@ echo('<table border="1">');
     echo('</table>');
   
     echo("<br>Najmłodsi pracownicy z działu: handel i serwis (Imię, nazwa_dział, wiek)<br>");
-    $sql ="select imie,nazwa_dzial,MAX(YEAR(CURDATE()) - YEAR(data_urodzenia)) as wiek from pracownicy,organizacja where id_org=dzial and imie not like '%a' group by imie,nazwa_dzial order by wiek desc limit 1"; 
+    $sql ="select imie,nazwa_dzial,MAX(YEAR(CURDATE()) - YEAR(data_urodzenia)) as wiek from pracownicy,organizacja where id_org=dzial group by imie,nazwa_dzial order by wiek desc limit 2"; 
   echo($sql);
 $result = mysqli_query($conn, $sql);
 if ( $result) {
@@ -244,10 +244,10 @@ if ( $result) {
       echo "Error: " . $sql . "<br>" . mysqli_error($conn);
     }
 echo('<table border="1">');
-    echo('<th>Imię</th><th>Dział</th><th>Wiek</th>');
+    echo('<th>Imię</th><th>Wiek</th>');
     while($row=mysqli_fetch_assoc($result)){
         echo('<tr>');
-        echo("<td>".$row['imie']."</td><td>".$row['dzial']."</td><td>".$row['wiek']."</td>");     
+        echo("<td>".$row['imie']."</td><td>".$row['wiek']."</td>");     
         echo('</tr>');
     }
     echo('</table>');
