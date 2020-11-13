@@ -235,7 +235,7 @@ echo('<table border="1">');
     echo('</table>');
   
     echo("<br>Najstarszy mężczyzna<br>");
-    $sql ="select imie,dzial,MAX(YEAR(CURDATE()) - YEAR(data_urodzenia)) as wiek from pracownicy,organizacja where id_org=dzial and imie not like '%a' order by wiek"; 
+    $sql ="select imie,dzial,MAX(YEAR(CURDATE()) - YEAR(data_urodzenia)) as wiek from pracownicy,organizacja where id_org=dzial and imie not like '%a' order by imie"; 
   echo($sql);
 $result = mysqli_query($conn, $sql);
 if ( $result) {
