@@ -126,7 +126,7 @@ echo('<table border="1">');
     }
     echo('</table>');
   
-    echo("<br>Średnia lat pracowników w poszczególnych działach<br>");
+    echo("<br>Średnia lat pracowników w poszczególnych działach(wraz z wypisanymi nazwami działów)<br>");
 $sql ="select dzial,nazwa_dzial,AVG(YEAR(CURDATE()) - YEAR(data_urodzenia)) as srednia from pracownicy,organizacja where id_org=dzial group by dzial,nazwa_dzial";
   echo($sql);
 $result = mysqli_query($conn, $sql);
@@ -162,8 +162,8 @@ echo('<table border="1">');
     }
     echo('</table>');
   
-    echo("<br>Najstarsi pracownicy w każdym dziale<br>");
-    $sql ="select imie,dzial,MAX(YEAR(CURDATE()) - YEAR(data_urodzenia)) as wiek from pracownicy,organizacja where id_org=dzial group by imie,dzial"; 
+    echo("<br>Najstarsi pracownicy w każdym dziale (nazwa_dział, wiek)<br>");
+    $sql ="select imie,dzial,nazwa_dzial,MAX(YEAR(CURDATE()) - YEAR(data_urodzenia)) as wiek from pracownicy,organizacja where id_org=dzial group by imie,dzial,nazwa_dzial"; 
   echo($sql);
 $result = mysqli_query($conn, $sql);
 if ( $result) {
@@ -172,15 +172,15 @@ if ( $result) {
       echo "Error: " . $sql . "<br>" . mysqli_error($conn);
     }
 echo('<table border="1">');
-    echo('<th>Imię</th><th>Nazwa Działu</th><th>Wiek</th>');
+    echo('<th>Imię</th><th>Dział</th><th>Nazwa Działu</th><th>Wiek</th>');
     while($row=mysqli_fetch_assoc($result)){
         echo('<tr>');
-        echo("<td>".$row['imie']."</td><td>".$row['dzial']."</td><td>".$row['wiek']."</td>");     
+        echo("<td>".$row['imie']."</td><td>".$row['dzial']."</td><td>".$row['nazwa_dzial']."</td><td>".$row['wiek']."</td>");     
         echo('</tr>');
     }
     echo('</table>');
   
-    echo("<br>Najmłodsi pracownicy z działu: handel i serwis<br>");
+    echo("<br>Najmłodsi pracownicy z działu: handel i serwis (nazwa_dział, wiek)<br>");
     $sql ="select nazwa_dzial,MIN(YEAR(CURDATE()) - YEAR(data_urodzenia)) as wiek from pracownicy,organizacja where id_org=dzial and nazwa_dzial=handel or nazwa_dzial=serwis group by nazwa_dzial"; 
   echo($sql);
 $result = mysqli_query($conn, $sql);
