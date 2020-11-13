@@ -127,7 +127,7 @@ echo('<table border="1">');
     echo('</table>');
   
     echo("<br>Średnia lat pracowników w poszczególnych działach<br>");
-$sql ="select dzial,AVG(YEAR(CURDATE()) - YEAR(data_urodzenia)) as srednia from pracownicy,organizacja where id_org=dzial group by dzial";
+$sql ="select dzial,nazwa_dzial,AVG(YEAR(CURDATE()) - YEAR(data_urodzenia)) as srednia from pracownicy,organizacja where id_org=dzial group by dzial,nazwa_dzial";
   echo($sql);
 $result = mysqli_query($conn, $sql);
 if ( $result) {
@@ -136,10 +136,10 @@ if ( $result) {
       echo "Error: " . $sql . "<br>" . mysqli_error($conn);
     }
 echo('<table border="1">');
-    echo('<th>Dział</th><th>Średnia lat</th>');
+    echo('<th>Dział</th><th>Nazwa Działu</th><th>Średnia lat</th>');
     while($row=mysqli_fetch_assoc($result)){
         echo('<tr>');
-        echo("<td>".$row['dzial']."</td><td>".$row['srednia']."</td>");  
+        echo("<td>".$row['dzial']."</td><td>".$row['nazwa_dzial']."</td><td>".$row['srednia']."</td>");  
         echo('</tr>');
     }
     echo('</table>');
