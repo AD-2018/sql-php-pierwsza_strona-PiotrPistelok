@@ -1,6 +1,6 @@
 <?php
 echo ("jestes w insert.php");
-echo $_POST['name'];
+echo $_POST['imie'];
 
 $servername = "remotemysql.com";
 $username = "i1g6dVaV2H";
@@ -12,7 +12,7 @@ if ($conn->connect_error) {
   die("Connection failed: " . $conn->connect_error);
 }
 
-$sql = "INSERT INTO Pracownik (null, "$_POST['name']", dzial, zarobki) 
+$sql = "INSERT INTO Pracownik (null, "$_POST['imie']", dzial, zarobki) 
        VALUES (null,'Adrian', 3, 20,'1999-11-21')";
 
 if ($conn->query($sql) === TRUE) {
