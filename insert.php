@@ -1,4 +1,6 @@
 <?php
+echo ("jestes w insert.php");
+echo $_POST['name'];
 
 $servername = "remotemysql.com";
 $username = "i1g6dVaV2H";
