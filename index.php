@@ -11,7 +11,7 @@
     <a href="OrgPracownicy.php">Organizacja Pracownicy</a>
     <a href="agreg.php">Funkcje Agregujące</a>
     <a href="Data_czas.php">Data i czas</a>
-    <a href="Formularze.html">Formularze</a>
+    <a href="formularze.html">Formularze</a>
 </div>
 </body>
 </html>
