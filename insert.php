@@ -13,7 +13,7 @@ if ($conn->connect_error) {
 }
 
 $sql = "INSERT INTO Pracownik (null, imie, dzial, zarobki, data_urodzenia) 
-       VALUES (null,"$_POST['imie']", 3, 20,'1999-11-21')";
+       VALUES (null,'"$_POST['imie']"', 3, 20,'1999-11-21')";
 
 if ($conn->query($sql) === TRUE) {
   echo "New record created successfully";
