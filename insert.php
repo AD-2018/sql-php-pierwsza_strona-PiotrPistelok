@@ -1,7 +1,13 @@
-
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <a href="index.php">Strona główna</a>
 <?php
-
-echo("jestes w insert.php <br>");
+echo("<br>"."<br>");
+echo("INSERT.PHP<br>");
 echo "<li>". $_POST['imie'];
 echo "<li>". $_POST['dzial'];
 echo "<li>". $_POST['zarobki'];
@@ -25,4 +31,6 @@ if ($conn->query($sql) === TRUE) {
 
 $conn->close();
 ?>
+       </body>
+</html>
 
