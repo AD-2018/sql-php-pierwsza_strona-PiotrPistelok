@@ -1,3 +1,10 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <a href="index.php">Strona główna</a>
 <?php
 echo("jestes w delete.php <br>");
 
@@ -17,3 +24,5 @@ if ($conn->query($sql) === TRUE) {
 
 $conn->close();
 ?>
+  </body>
+</html>
