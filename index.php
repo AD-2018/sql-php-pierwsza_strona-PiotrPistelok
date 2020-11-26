@@ -11,7 +11,7 @@
     <a href="OrgPracownicy.php">Organizacja Pracownicy</a>
     <a href="agreg.php">Funkcje Agregujące</a>
     <a href="Data_czas.php">Data i czas</a>
-    <a href="danedobazy.html">Dane do bazy</a>
+    <a href="danedobazy.php">Dane do bazy</a>
 </div>
 <?php
     require_once("connect.php");
