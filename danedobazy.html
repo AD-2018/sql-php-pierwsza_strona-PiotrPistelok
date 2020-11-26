@@ -6,12 +6,20 @@
   <title>Dane do Bazy</title>
 </head>
 <body>
+<h3>DODAJ PRACOWNIKA</h3>	
 	<form action="insert.php" method="POST">
-	    	<label>Imię</label><input type="text" name="imie">
+	    	<label>Imię</label><input type="text" name="imie"></br>
 		<label>Dział</label><input type="number" name="dzial"></br>
 		<label>Zarobki</label><input type="number" name="zarobki"></br>
 		<input type="date" name="data_urodzenia"></br>
 	    	<input type="submit" value="dodaj pracownika">
 	</form>
+<h3>USUN PRACOWNIKA</h3>
+	<form action="delete.php" method="POST">
+   		<input type="number" name="id"></br>
+   		<input type="submit" value="Usuń pracownika">
+	</form>
 </body>
+
+
 </html>
