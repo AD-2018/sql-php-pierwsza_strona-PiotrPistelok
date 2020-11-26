@@ -17,7 +17,7 @@ echo ("<br>");
 echo $sql;
 
 if ($conn->query($sql) === TRUE) {
-  echo "Record deleted successfully";
+  echo ("<br>"."Record deleted successfully");
 } else {
   echo "Error: " . $sql . "<br>" . $conn->error;
 }
