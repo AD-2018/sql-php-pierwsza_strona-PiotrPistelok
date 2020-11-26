@@ -6,7 +6,7 @@
 <body>
     <a href="index.php">Strona główna</a>
 <?php
-    echo ("<br>"."<br>"."<br>");
+    echo ("<br>"."<br>");
     echo("jestes w delete.php <br>");
 
 echo $_POST['id'];
