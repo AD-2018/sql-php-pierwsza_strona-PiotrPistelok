@@ -7,9 +7,8 @@
     <a href="index.php">Strona główna</a>
 <?php
     echo ("<br>"."<br>");
-    echo("jestes w delete.php <br>");
 
-echo $_POST['id'];
+echo ("USUWANIE ID: ".$_POST['id']);
 
 require_once("connect.php");
 
