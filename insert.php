@@ -7,7 +7,7 @@
     <a href="index.php">Strona główna</a>
 <?php
 echo("<br>"."<br>");
-echo("INSERT.PHP<br>");
+echo("DODAŁEŚ PRACOWNIKA<br>");
 echo "<li>". $_POST['imie'];
 echo "<li>". $_POST['dzial'];
 echo "<li>". $_POST['zarobki'];
@@ -24,7 +24,7 @@ echo ("<br>");
 
 echo $sql;
 if ($conn->query($sql) === TRUE) {
-  echo "New record created successfully";
+  echo ("<br>"."Pracownik został pomyślnie dodany.");
 } else {
   echo "Error: " . $sql . "<br>" . $conn->error;
 }
