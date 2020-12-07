@@ -31,7 +31,7 @@ echo('<table border="1">');
     echo('<th>Id</th><th>Autor</th>');
     while($row=mysqli_fetch_assoc($result)){
         echo('<tr>');
-        echo('<td>'.$row['id_autor'].'</td><td>'.$row['autor'].'</td>');
+        echo('<td>'.$row['id'].'</td><td>'.$row['autor'].'</td>');
         echo('</tr>');
     }
     echo('</table>');
@@ -49,7 +49,7 @@ echo('<table border="1">');
    echo('<th>Id</th><th>Tytuł</th>');
     while($row=mysqli_fetch_assoc($result)){
         echo('<tr>');
-        echo('<td>'.$row['id_tytul'].'</td><td>'.$row['tytul'].'</td>');
+        echo('<td>'.$row['id'].'</td><td>'.$row['tytul'].'</td>');
         echo('</tr>');
     }
     echo('</table>');
@@ -64,10 +64,10 @@ if ( $result) {
       echo "Error: " . $sql . "<br>" . mysqli_error($conn);
     }
 echo('<table border="1">');
-    echo('<th>Id</th><th>Id Autor</th><th>Id tytuł</th><th>wypoz</th>');
+    echo('<th>Id</th><th>Id Autor</th><th>Id tytuł</th>');
     while($row=mysqli_fetch_assoc($result)){
         echo('<tr>');
-        echo('<td>'.$row['id_book'].'</td><td>'.$row['id_autor'].'</td><td>'.$row['id_tytul'].'</td><td>'.$row['wypoz'].'</td>');
+        echo('<td>'.$row['id'].'</td><td>'.$row['biblAutor_id'].'</td><td>'.$row['biblTytul_id'].'</td>');
         echo('</tr>');
     }
     echo('</table>');
