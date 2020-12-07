@@ -37,7 +37,7 @@ echo('<table border="1">');
     echo('</table>');
 
 echo("<br>Zad. 2<br>");
-$sql = "SELECT * FROM bibltytul";
+$sql = "SELECT * FROM biblTytul";
 echo($sql);
 $result = mysqli_query($conn, $sql);
 if ( $result) {
@@ -55,7 +55,7 @@ echo('<table border="1">');
     echo('</table>');
 
 echo("<br>Zad. 3<br>");
-$sql = "SELECT * FROM biblbook";
+$sql = "SELECT * FROM biblAutor_biblTytul";
 echo($sql);
 $result = mysqli_query($conn, $sql);
 if ( $result) {
