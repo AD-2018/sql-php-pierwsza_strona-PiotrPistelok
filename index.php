@@ -12,6 +12,7 @@
     <a href="agreg.php">Funkcje Agregujące</a>
     <a href="Data_czas.php">Data i czas</a>
     <a href="danedobazy.php">Dane do bazy</a>
+    <a href="ksiazki.php">Książki</a>
 </div>
 <?php
     require_once("connect.php");
