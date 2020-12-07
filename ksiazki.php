@@ -19,7 +19,7 @@
 require_once("connect.php");
 
 echo("<br>Zad. 1<br>");
-$sql = "SELECT * FROM bibl_autor";
+$sql = "SELECT * FROM biblautor";
 echo($sql);
 $result = mysqli_query($conn, $sql);
 if ( $result) {
@@ -37,7 +37,7 @@ echo('<table border="1">');
     echo('</table>');
 
 echo("<br>Zad. 2<br>");
-$sql = "SELECT * FROM bibl_tytul";
+$sql = "SELECT * FROM bibltytul";
 echo($sql);
 $result = mysqli_query($conn, $sql);
 if ( $result) {
@@ -55,7 +55,7 @@ echo('<table border="1">');
     echo('</table>');
 
 echo("<br>Zad. 3<br>");
-$sql = "SELECT * FROM bibl_book";
+$sql = "SELECT * FROM biblbook";
 echo($sql);
 $result = mysqli_query($conn, $sql);
 if ( $result) {
