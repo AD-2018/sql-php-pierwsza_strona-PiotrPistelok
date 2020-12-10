@@ -55,7 +55,7 @@ echo('<table border="1">');
     echo('</table>');
 
 echo("<br>WSZYSTKO<br>");
-$sql = "SELECT id_book, autor, tytul FROM biblAutor_biblTytul, biblTytul, biblAutor WHERE biblTytul.id = biblAutor_biblTytul.biblTytul_id AND biblAutor.id = biblAutor_biblTytul.biblAutor_id";
+$sql = "SELECT id_book, autor, tytul FROM bibl_book, biblTytul, biblAutor WHERE biblTytul.id = bibl_book.biblTytul_id AND biblAutor.id = bibl_book.biblAutor_id";
 echo($sql);
 $result = mysqli_query($conn, $sql);
 if ( $result) {
