@@ -30,9 +30,9 @@ if ( $result) {
 echo('<table border="1">');
     echo('<th>Id</th><th>Autor</th>');
     while($row=mysqli_fetch_assoc($result)){
-        echo('<tr>');
-        echo('<td>'.$row['id'].'</td><td>'.$row['autor'].'</td>');
-        echo('</tr>');
+        //echo('<tr>');
+        <option>('<td>'.$row['id'].'</td><td>'.$row['autor'].'</td>');
+        //echo('</tr>');
     }
     echo('</table>');
 
@@ -54,8 +54,8 @@ echo('<table border="1">');
     }
     echo('</table>');
 
-echo("<br>Zad. 3<br>");
-$sql = "SELECT * FROM biblAutor_biblTytul";
+echo("<br>WSZYSTKO<br>");
+$sql = "SELECT id_book, autor, tytul FROM biblAutor_biblTytul, biblTytul, biblAutor WHERE biblTytul.id = biblAutor_biblTytul.biblTytul_id AND biblAutor.id = biblAutor_biblTytul.biblAutor_id";
 echo($sql);
 $result = mysqli_query($conn, $sql);
 if ( $result) {
@@ -64,10 +64,10 @@ if ( $result) {
       echo "Error: " . $sql . "<br>" . mysqli_error($conn);
     }
 echo('<table border="1">');
-    echo('<th>Id</th><th>Id Autor</th><th>Id tytuł</th>');
+    echo('<th>Id</th><th>Autor</th><th>Tytuł</th>');
     while($row=mysqli_fetch_assoc($result)){
         echo('<tr>');
-        echo('<td>'.$row['id'].'</td><td>'.$row['biblAutor_id'].'</td><td>'.$row['biblTytul_id'].'</td>');
+        echo('<td>'.$row['id_book'].'</td><td>'.$row['autor'].'</td><td>'.$row['tytul'].'</td>');
         echo('</tr>');
     }
     echo('</table>');
