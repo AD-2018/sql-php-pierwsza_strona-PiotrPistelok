@@ -18,11 +18,7 @@
 <?php
 require_once("connect.php");
 
-echo('<label for="bibl_autor">Wybierz autora:</label>');
-echo('<select id="bibl_autor">');
-    echo('<option value="id_autor"></option>');
-    echo('<option value="autor"></option>');
-echo('</select>');
+
 
 echo("<br>Autorzy<br>");
 $sql = "SELECT * FROM biblAutor";
