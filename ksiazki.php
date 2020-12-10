@@ -18,7 +18,13 @@
 <?php
 require_once("connect.php");
 
-echo("<br>Zad. 1<br>");
+echo('<label for="bibl_autor">Wybierz autora:</label>');
+echo('<select id="bibl_autor">');
+    echo('<option value="id_autor"></option>');
+    echo('<option value="autor"></option>');
+echo('</select>');
+
+echo("<br>Autorzy<br>");
 $sql = "SELECT * FROM biblAutor";
 echo($sql);
 $result = mysqli_query($conn, $sql);
@@ -36,7 +42,7 @@ echo('<table border="1">');
     }
     echo('</table>');
 
-echo("<br>Zad. 2<br>");
+echo("<br>Tytuły<br>");
 $sql = "SELECT * FROM biblTytul";
 echo($sql);
 $result = mysqli_query($conn, $sql);
