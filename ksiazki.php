@@ -22,7 +22,6 @@ require_once("connect.php");
 
 echo("<br>Autorzy<br>");
 $sql = "SELECT * FROM biblAutor";
-echo($sql);
 $result = mysqli_query($conn, $sql);
 if ( $result) {
         echo "<li>ok<br>";
@@ -35,11 +34,10 @@ echo('<select name="Autor">');
         echo($row['autor']);
         echo"</option>"; 
     }
-echo('</select>');
+echo('</select>."<br>"');
 
 echo("<br>Tytuły<br>");
 $sql = "SELECT * FROM biblTytul";
-echo($sql);
 $result = mysqli_query($conn, $sql);
 if ( $result) {
         echo "<li>ok<br>";
@@ -52,12 +50,11 @@ echo('<select name="Tytul">');
         echo($row['tytul']);
         echo"</option>"; 
     }
-echo('</select>');
+echo('</select>."<br>"');
     
 
 echo("<br>WSZYSTKO<br>");
 $sql = "SELECT id_book, autor, tytul FROM bibl_book, biblTytul, biblAutor WHERE biblTytul.id = bibl_book.biblTytul_id AND biblAutor.id = bibl_book.biblAutor_id";
-echo($sql);
 $result = mysqli_query($conn, $sql);
 if ( $result) {
         echo "<li>ok";
