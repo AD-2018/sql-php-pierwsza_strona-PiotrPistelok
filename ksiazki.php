@@ -34,7 +34,7 @@ echo('<select name="Autor">');
         echo($row['autor']);
         echo"</option>"; 
     }
-echo('</select>.<br>');
+echo('</select><br>');
 
 echo("<br>Tytuły<br>");
 $sql = "SELECT * FROM biblTytul";
@@ -50,7 +50,7 @@ echo('<select name="Tytul">');
         echo($row['tytul']);
         echo"</option>"; 
     }
-echo('</select>.<br>');
+echo('</select><br>');
     
 
 echo("<br>WSZYSTKO<br>");
