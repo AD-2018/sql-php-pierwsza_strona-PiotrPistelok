@@ -30,9 +30,9 @@ if ( $result) {
 echo('<table border="1">');
     echo('<th>Id</th><th>Autor</th>');
     while($row=mysqli_fetch_assoc($result)){
-        //echo('<tr>');
-        <option>('<td>'.$row['id'].'</td><td>'.$row['autor'].'</td>');
-        //echo('</tr>');
+        echo('<tr>');
+        echo('<td>'.$row['id'].'</td><td>'.$row['autor'].'</td>');
+        echo('</tr>');
     }
     echo('</table>');
 
