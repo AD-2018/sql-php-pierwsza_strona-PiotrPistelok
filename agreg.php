@@ -4,10 +4,10 @@
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <a href="https://github.com/AD-2018/sql-php-pierwsza_strona-PiotrPistelok">GitHubekhehe</a>
+    <a href="https://github.com/AD-2018/sql-php-pierwsza_strona-PiotrPistelok">GitHub</a>
     <h2>Piotr Pistelok nr 9</h2>
 <div class="nav">
-    <a href="index.php">Strona główna</a>
+    <a href="index.php">Main site</a>
     <a href="OrgPracownicy.php">Organizacja Pracownicy</a>
     <a href="Pracownicy.php">Pracownicy</a>
     <a href="Data_czas.php">Data i czas</a>
