@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link rel="stylesheet" href="main/style.css">
+<link rel="stylesheet" href="sql-php-pierwsza_strona-PiotrPistelok/style.css">
 </head>
 <body>
     <a href="https://github.com/AD-2018/sql-php-pierwsza_strona-PiotrPistelok">GitHub</a>
     <h2>Piotr Pistelok nr 9</h2>
 <div class="nav">
-    <a href="main/index.php">Strona główna</a>
+    <a href="sql-php-pierwsza_strona-PiotrPistelok/index.php">Strona główna</a>
     <a href="OrgPracownicy.php">Organizacja Pracownicy</a>
     <a href="agreg.php">Funkcje Agregujące</a>
     <a href="Data_czas.php">Data i czas</a>
