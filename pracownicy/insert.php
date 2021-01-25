@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="../style.css">
 </head>
 <body>
-    <a href="index.php">Strona główna</a>
+    <a href="../index.php">Strona główna</a>
 <?php
 echo("<br>"."<br>");
 echo("DODAŁEŚ PRACOWNIKA<br>");
