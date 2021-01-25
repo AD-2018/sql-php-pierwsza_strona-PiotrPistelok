@@ -7,11 +7,11 @@
     <a href="https://github.com/AD-2018/sql-php-pierwsza_strona-PiotrPistelok">GitHub</a>
     <h2>Piotr Pistelok nr 9</h2>
 <div class="nav">
-    <a href="Pracownicy.php">Pracownicy</a>
-    <a href="OrgPracownicy.php">Organizacja Pracownicy</a>
-    <a href="agreg.php">Funkcje Agregujące</a>
-    <a href="Data_czas.php">Data i czas</a>
-    <a href="danedobazy.php">Dane do bazy</a>
+    <a href="pracownicy/Pracownicy.php">Pracownicy</a>
+    <a href="pracownicy/OrgPracownicy.php">Organizacja Pracownicy</a>
+    <a href="pracownicy/agreg.php">Funkcje Agregujące</a>
+    <a href="pracownicy/Data_czas.php">Data i czas</a>
+    <a href="pracownicy/danedobazy.php">Dane do bazy</a>
     <a href="biblioteka/ksiazki.php">Książki</a>
 </div>
 <?php
