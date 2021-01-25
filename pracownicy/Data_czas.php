@@ -16,7 +16,7 @@
     <h2>Jestem w Data i czas</h2>
 
 <?php
-require_once("connect.php");
+require_once("../connect.php");
      
 echo("<br>Wiek poszczególnych pracowników (w latach)<br>");
 $sql ="select *,YEAR(curdate())-YEAR(data_urodzenia) AS wiek from pracownicy,organizacja where id_org=dzial";

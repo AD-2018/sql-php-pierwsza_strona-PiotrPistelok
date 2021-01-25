@@ -21,7 +21,7 @@
    		<input type="submit" value="Usuń pracownika">
 	</form>
 <?php
-    require_once("connect.php");
+    require_once("../connect.php");
     $sql = "SELECT * FROM pracownicy, organizacja where id_org=dzial";
     echo("<br>");
     echo($sql);

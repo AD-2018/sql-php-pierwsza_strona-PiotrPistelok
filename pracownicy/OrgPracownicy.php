@@ -14,7 +14,7 @@
 </div>
     <h2>Jestem w Organizacja,pracownicy</h2>
 <?php
-require_once("connect.php");
+require_once("../connect.php");
 
 echo("<br>Pracownicy z nazwą działów<br>");
 $sql = "SELECT * FROM pracownicy, organizacja where id_org=dzial";

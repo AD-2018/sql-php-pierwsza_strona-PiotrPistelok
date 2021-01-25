@@ -14,7 +14,7 @@
 </div>
     <h2>Jestem w Funkcjach agregujących</h2>
 <?php
-require_once("connect.php");
+require_once("../connect.php");
 
 echo("<br>Suma zarobków wszystkich pracowników<br>");
 $sql = "SELECT sum(zarobki) as suma_zarobków FROM pracownicy, organizacja where id_org=dzial;";

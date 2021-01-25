@@ -15,7 +15,7 @@
     <h2>Jestem w Pracownicy</h2>
 
 <?php
-require_once("connect.php");
+require_once("../connect.php");
 
 echo("<br>Pracownicy tylko z działu 2<br>");
 $sql = "SELECT * FROM pracownicy where dzial=2";

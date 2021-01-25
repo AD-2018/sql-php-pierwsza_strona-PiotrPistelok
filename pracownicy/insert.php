@@ -13,7 +13,7 @@ echo "<li>". $_POST['dzial'];
 echo "<li>". $_POST['zarobki'];
 echo "<li>". $_POST['data_urodzenia'];
 
-require_once("connect.php");
+require_once("../connect.php");
 
 
 $sql = "INSERT INTO pracownicy (id_pracownicy, imie, dzial, zarobki, data_urodzenia) 
