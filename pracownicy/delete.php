@@ -2,6 +2,7 @@
 <html>
 <head>
 <link rel="stylesheet" href="../style.css">
+<title>Piotr Pistelok</title>
 </head>
 <body>
     <a href="../index.php">Strona główna</a>

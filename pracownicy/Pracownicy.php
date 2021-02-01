@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+<title>Piotr Pistelok</title>
 <link rel="stylesheet" href="../style.css">
 </head>
 <body>
