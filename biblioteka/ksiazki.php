@@ -16,13 +16,13 @@
 </div>
     <h2>Jestem w Książki</h2>
     <h3>Dodawanie autora</h3>
-	<form action="/ksiazki/insertautor.php" method="POST">
+	<form action="/ksiazki/insert_autor.php" method="POST">
 		<label>Autor</label><input type="text" name="autor"></br>
 		<input type="submit" value="dodaj autora">
 	</form>
 
   <h3>Dodawanie tytułu</h3>
-	<form action="/ksiazki/inserttytul.php" method="POST">
+	<form action="/ksiazki/insert_tytul.php" method="POST">
 		<label>Tytul</label><input type="text" name="tytul"></br>
 		<input type="submit" value="dodaj tytul">
 	</form>
