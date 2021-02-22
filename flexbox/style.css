@@ -1,13 +1,13 @@
 .tytul {
-    background-color: lightcoral;
+    background-color: bisque;
 }
 body {
     background-color: bisque;
 }
 
 .menu {
-    color: greenyellow;
-    background-color: #99ccff;
+    color: red;
+    background-color: beige;
     font-size: 2em;
     display: flex;
     flex-wrap: wrap;
@@ -25,7 +25,7 @@ body {
     width: 30%;
   }
   .menu_item {
-    background-color: rgb(163, 171, 245);
+    background-color: bisque;
     margin: 0 0 1rem 0;
     width: 67%;
   }
