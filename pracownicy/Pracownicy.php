@@ -19,8 +19,8 @@
         <a class="link" href="Data_czas.php">Data i czas</a>
         <a class="link" href="/flexbox/index.html">Flexbox </a>
     </div>
-    <h2>Jestem w Pracownicy</h2>
     <div class="strona">
+    <h2>Jestem w Pracownicy</h2>
 <?php
 require_once("../connect.php");
 

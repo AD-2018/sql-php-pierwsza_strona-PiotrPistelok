@@ -20,8 +20,8 @@
         <a class="link" href="../pracownicy/Data_czas.php">Data i czas</a>
         <a class="link" href="/flexbox/index.html">Flexbox </a>
     </div>
-    <h2>Jestem w Książki</h2>
     <div class="strona">
+    <h2>Jestem w Książki</h2>
     <h3>Dodawanie autora</h3>
 	<form action="/ksiazki/insert_autor.php" method="POST">
 		<label>Autor</label><input type="text" name="autor"></br>
