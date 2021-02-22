@@ -6,17 +6,23 @@
 <title>Piotr Pistelok</title>
 </head>
 <body>
-    <a href="https://github.com/AD-2018/sql-php-pierwsza_strona-PiotrPistelok">GitHub</a>
-    <h2>Piotr Pistelok nr 9</h2>
-<div class="nav">
-    <a href="pracownicy/Pracownicy.php">Pracownicy</a>
-    <a href="pracownicy/OrgPracownicy.php">Organizacja Pracownicy</a>
-    <a href="pracownicy/agreg.php">Funkcje Agregujące</a>
-    <a href="pracownicy/Data_czas.php">Data i czas</a>
-    <a href="pracownicy/danedobazy.php">Dane do bazy</a>
-    <a href="biblioteka/ksiazki.php">Książki</a>
-    <a class="link" href="/flexbox/index.html">Flexbox </a>
-</div>
+    <div class="container">
+        <div class="tytul">
+            <a class="link" href="https://github.com/AD-2018/sql-php-pierwsza_strona-PiotrPistelok">GitHub</a>
+            <div class="imie">
+            <h2>Piotr Pistelok nr 9</h2>
+        </div>
+    </div>
+    <div class="nav">
+        <a href="pracownicy/Pracownicy.php">Pracownicy</a>
+        <a href="pracownicy/OrgPracownicy.php">Organizacja Pracownicy</a>
+        <a href="pracownicy/agreg.php">Funkcje Agregujące</a>
+        <a href="pracownicy/Data_czas.php">Data i czas</a>
+        <a href="pracownicy/danedobazy.php">Dane do bazy</a>
+        <a href="biblioteka/ksiazki.php">Książki</a>
+        <a class="link" href="/flexbox/index.html">Flexbox </a>
+    </div>
+    <div class="strona">
 <?php
     require_once("connect.php");
     $sql = "SELECT * FROM pracownicy, organizacja where id_org=dzial";
@@ -37,6 +43,7 @@
      }
         echo('</table>');
 ?>
+    </div>
 </body>
 </html>
 
