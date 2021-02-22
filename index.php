@@ -14,6 +14,7 @@
     <a href="pracownicy/Data_czas.php">Data i czas</a>
     <a href="pracownicy/danedobazy.php">Dane do bazy</a>
     <a href="biblioteka/ksiazki.php">Książki</a>
+    <a class="link" href="/flexbox/index.html">Flexbox </a>
 </div>
 <?php
     require_once("connect.php");
