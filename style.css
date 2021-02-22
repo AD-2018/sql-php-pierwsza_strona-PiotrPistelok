@@ -28,4 +28,8 @@ a:hover{
   background-color: cyan;
   padding: 1em;
 }
+.container {
+    display: flex;
+    flex-wrap: wrap;
+}
   
