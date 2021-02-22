@@ -5,16 +5,22 @@
 <title>Piotr Pistelok</title>
 </head>
 <body>
-    <a href="https://github.com/AD-2018/sql-php-pierwsza_strona-PiotrPistelok">GitHub</a>
-    <h2>Piotr Pistelok nr 9</h2>
-<div class="nav">
-    <a href="../index.php">Strona główna</a>
-    <a href="Pracownicy.php">Pracownicy</a>
-    <a href="agreg.php">Funkcje Agregujące</a>
-    <a href="data_czas.php">Data i czas</a>
-    <a class="link" href="/flexbox/index.html">Flexbox </a>
-</div>
+    <div class="container">
+        <div class="tytul">
+            <a class="link" href="https://github.com/AD-2018/sql-php-pierwsza_strona-PiotrPistelok">GitHub</a>
+            <div class="imie">
+            <h2>Piotr Pistelok nr 9</h2>
+        </div>
+    </div>
+    <div class="nav">
+        <a class="link" href="../index.php">Strona główna</a>
+        <a class="link" href="Pracownicy.php">Pracownicy</a>
+        <a class="link" href="agreg.php">Funkcje Agregujące</a>
+        <a class="link" href="data_czas.php">Data i czas</a>
+        <a class="link" href="/flexbox/index.html">Flexbox </a>
+    </div>
     <h2>Jestem w Organizacja,pracownicy</h2>
+    <div class="strona">
 <?php
 require_once("../connect.php");
 
@@ -187,6 +193,7 @@ echo('<table border="1">');
     }
     echo('</table>');
 ?>
+    </div>
 </body>
 </html>
 

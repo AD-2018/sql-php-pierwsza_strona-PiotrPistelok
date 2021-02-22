@@ -5,17 +5,23 @@
 <title>Piotr Pistelok</title>
 </head>
 <body>
-    <a href="https://github.com/AD-2018/sql-php-pierwsza_strona-PiotrPistelok">GitHub</a>
-    <h2>Piotr Pistelok nr 9</h2>
-<div class="nav">
-    <a href="../index.php">Strona główna</a>
-    <a href="../pracownicy/OrgPracownicy.php">Organizacja Pracownicy</a>
-    <a href="../pracownicy/Pracownicy.php">Pracownicy</a>
-    <a href="../pracownicy/agreg.php">Funkcje Agregujące</a>
-    <a href="../pracownicy/Data_czas.php">Data i czas</a>
-    <a class="link" href="/flexbox/index.html">Flexbox </a>
-</div>
+    <div class="container">
+        <div class="tytul">
+            <a class="link" href="https://github.com/AD-2018/sql-php-pierwsza_strona-PiotrPistelok">GitHub</a>
+            <div class="imie">
+            <h2>Piotr Pistelok nr 9</h2>
+        </div>
+    </div>
+    <div class="nav">
+        <a class="link" href="../index.php">Strona główna</a>
+        <a class="link" href="../pracownicy/OrgPracownicy.php">Organizacja Pracownicy</a>
+        <a class="link" href="../pracownicy/Pracownicy.php">Pracownicy</a>
+        <a class="link" href="../pracownicy/agreg.php">Funkcje Agregujące</a>
+        <a class="link" href="../pracownicy/Data_czas.php">Data i czas</a>
+        <a class="link" href="/flexbox/index.html">Flexbox </a>
+    </div>
     <h2>Jestem w Książki</h2>
+    <div class="strona">
     <h3>Dodawanie autora</h3>
 	<form action="/ksiazki/insert_autor.php" method="POST">
 		<label>Autor</label><input type="text" name="autor"></br>
@@ -83,5 +89,6 @@ echo('<table border="1">');
     }
     echo('</table>');
 ?>
+    </div>
 </body>
 </html>
