@@ -13,6 +13,7 @@
     <a href="../pracownicy/Pracownicy.php">Pracownicy</a>
     <a href="../pracownicy/agreg.php">Funkcje Agregujące</a>
     <a href="../pracownicy/Data_czas.php">Data i czas</a>
+    <a class="link" href="/flexbox/index.html">Flexbox </a>
 </div>
     <h2>Jestem w Książki</h2>
     <h3>Dodawanie autora</h3>

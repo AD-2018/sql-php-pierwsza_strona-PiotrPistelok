@@ -12,6 +12,7 @@
     <a href="Pracownicy.php">Pracownicy</a>
     <a href="agreg.php">Funkcje Agregujące</a>
     <a href="data_czas.php">Data i czas</a>
+    <a class="link" href="/flexbox/index.html">Flexbox </a>
 </div>
     <h2>Jestem w Organizacja,pracownicy</h2>
 <?php
