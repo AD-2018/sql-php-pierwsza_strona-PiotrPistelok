@@ -20,7 +20,8 @@
         <a class="link" href="pracownicy/Data_czas.php">Data i czas</a>
         <a class="link" href="pracownicy/danedobazy.php">Dane do bazy</a>
         <a class="link" href="biblioteka/ksiazki.php">Książki</a>
-        <a class="link" href="/flexbox/index.html">Flexbox </a>
+        <a class="link" href="/flexbox/index.html">Flexbox</a>
+        <a class="link" href="CSSGRID/index.html">GRID</a>
     </div>
     <div class="strona">
 <?php
