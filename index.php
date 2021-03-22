@@ -21,8 +21,8 @@
         <a class="link" href="pracownicy/danedobazy.php">Dane do bazy</a>
         <a class="link" href="biblioteka/ksiazki.php">Książki</a>
         <a class="link" href="/flexbox/index.html">Flexbox</a>
-        <a class="link" href="CSSGRID/index.html">GRID</a>
     </div>
+    <a class="link" href="CSSGRID/index.html">GRID</a>
     <div class="strona">
 <?php
     require_once("connect.php");
