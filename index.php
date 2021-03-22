@@ -9,9 +9,11 @@
     <div class="container">
         <div class="tytul">
             <a class="link" href="https://github.com/AD-2018/sql-php-pierwsza_strona-PiotrPistelok">GitHub</a>
-            <div class="imie">
+        </div>
+        <div class="imie">
             <h2>Piotr Pistelok nr 9</h2>
         </div>
+    </div>
     </div>
     <div class="nav">
         <a class="link" href="pracownicy/Pracownicy.php">Pracownicy</a>
