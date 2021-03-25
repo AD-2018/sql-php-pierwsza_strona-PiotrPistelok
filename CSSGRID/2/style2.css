@@ -4,34 +4,39 @@
   }
   .container {
     background-color: rgb(50, 117, 205);
-    padding: 5px;
     height: 100vh;
     display: grid;
-    grid-template-columns: 1fr 2fr 0,5fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-areas: 
-        "a a a"
-        "b c e"
-        "d d d"
-    }
-    header{
-        background-color: red;
-        grid-area: a;
-        height: 15vh;
-    }
-    nav{
-        background-color: orange;
-        grid-area: b;
-    }
-    main{
-        background-color: lightblue;
-        grid-area: c;
-        height: 83vh;
-    }
-    footer{
-        background-color: lightgreen;
-        grid-area: d;
-    }
-    aside{
-        grid-area: e;
-        background-color: pink;
-        }
+    "a b b b"
+    "a c c e"
+    "a d f e";
+  }
+  header {
+      background-color: red;
+      grid-area: a;
+      height: 100vh;
+  }
+  nav {
+      background-color: lightgreen;
+      grid-area: b;
+      height: 35vh;
+  }
+  main {
+      background-color: lightskyblue;
+      grid-area: c;
+      height: 35vh;
+  }
+  aside {
+      background-color: orange;
+      grid-area: e;
+  }
+  footer {
+      background-color: yellow;
+      grid-area: d;
+      height: 30vh;
+  }
+  .extra {
+      background-color: yellow;
+      grid-area: f;
+  }
