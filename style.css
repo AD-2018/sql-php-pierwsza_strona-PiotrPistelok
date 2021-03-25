@@ -31,7 +31,7 @@ a {
     text-align: center;
     background-color: white;
     border-radius: 4em;
-    width: 6em;
+    width: 8%;
     display: inline-block;
 }
 
@@ -57,7 +57,7 @@ a {
 .nav {
   background-color: palevioletred;
   margin: 10px;
-  width: fit-content;
+  width: 10%;
 }
 .strona {
   background-color: pink;
