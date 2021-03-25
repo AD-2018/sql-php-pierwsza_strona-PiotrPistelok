@@ -14,7 +14,6 @@
             <h2>Piotr Pistelok nr 9</h2>
         </div>
     </div>
-    </div>
     <div class="nav">
         <a class="link" href="pracownicy/Pracownicy.php">Pracownicy</a>
         <a class="link" href="pracownicy/OrgPracownicy.php">Organizacja Pracownicy</a>
