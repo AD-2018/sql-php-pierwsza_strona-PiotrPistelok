@@ -29,7 +29,7 @@
       height: 35vh;
   }
   aside {
-      background-color: pink;
+      background-color: orange;
       grid-area: e;
   }
   footer {
