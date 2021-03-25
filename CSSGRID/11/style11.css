@@ -22,11 +22,6 @@
       grid-area: b;
       height: auto;
   }
-  main {
-      background-color: lightskyblue;
-      grid-area: c;
-      height: auto;
-  }
   aside {
       background-color: orange;
       grid-area: e;
