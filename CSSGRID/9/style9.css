@@ -28,11 +28,6 @@
       grid-area: c;
       height: auto;
   }
-  aside {
-      background-color: orange;
-      grid-area: e;
-      height: auto;
-  }
   footer {
       background-color: yellow;
       grid-area: d;
