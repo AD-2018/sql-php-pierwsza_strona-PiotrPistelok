@@ -6,11 +6,11 @@
     background-color: rgb(50, 117, 205);
     height: 100vh;
     display: grid;
-    grid-template-columns: 1fr 2fr 0.5fr;
+    grid-template-columns: 1fr 1fr 1fr;
     grid-template-areas: 
-    "a b e"
+    "a b b"
     "a c e"
-    "a d e";
+    "d f e";
   }
   header {
       background-color: red;
@@ -30,9 +30,16 @@
   aside {
       background-color: orange;
       grid-area: e;
+      width: 40vh;
   }
   footer {
       background-color: yellow;
       grid-area: d;
+      width: 50vh;
       height: 30vh;
+  }
+  .extra {
+      background-color: yellow;
+      grid-area: f;
+      width: 10vh;
   }

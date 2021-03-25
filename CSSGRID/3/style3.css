@@ -6,11 +6,11 @@
     background-color: rgb(50, 117, 205);
     height: 100vh;
     display: grid;
-    grid-template-columns: 1fr 2fr 0.5fr;
+    grid-template-columns: 1fr 1fr 1fr;
     grid-template-areas: 
-    "a b e"
+    "a b b"
     "a c e"
-    "a d e";
+    "a d d";
   }
   header {
       background-color: red;
