@@ -57,7 +57,7 @@ a {
 .nav {
   background-color: palevioletred;
   margin: 10px;
-  width: 10%;
+  width: fit-content;
 }
 .strona {
   background-color: pink;
