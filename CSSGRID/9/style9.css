@@ -8,31 +8,37 @@
     display: grid;
     grid-template-columns: 1fr 2fr 0.5fr;
     grid-template-areas: 
-    "a b e"
-    "a c e"
-    "a d e";
+    "b b b"
+    "a c f"
+    "d d d";
   }
   header {
       background-color: red;
       grid-area: a;
-      height: 100vh;
+      height: auto;
   }
   nav {
       background-color: lightgreen;
       grid-area: b;
-      height: 35vh;
+      height: auto;
   }
   main {
       background-color: lightskyblue;
       grid-area: c;
-      height: 35vh;
+      height: auto;
   }
   aside {
       background-color: orange;
       grid-area: e;
+      height: auto;
   }
   footer {
       background-color: yellow;
       grid-area: d;
-      height: 30vh;
+      height: auto;
+  }
+  .niebieski {
+      background-color: lightskyblue;
+      grid-area: f;
+      height: auto;
   }
