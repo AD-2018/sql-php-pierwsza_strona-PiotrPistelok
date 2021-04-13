@@ -47,13 +47,3 @@
       grid-area: d;
       height: 30vh;
   }
-  table, td {
-    border: 1px solid black;
-  }
-  th {
-    text-align: center;
-  }
-  table {
-    border-collapse: collapse;
-    width: 50%;
-  }
