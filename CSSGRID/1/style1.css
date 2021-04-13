@@ -18,6 +18,7 @@
       grid-area: a;
       height: 100vh;
       color: black;
+      padding-top: 50%;
   }
   nav {
       background-color: lightgreen;
@@ -36,6 +37,7 @@
       padding-left: 10px;
       grid-area: e;
       color: black;
+      padding-top: 50%;
   }
   footer {
       background-color: yellow;

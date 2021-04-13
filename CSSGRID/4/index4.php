@@ -37,7 +37,7 @@
       <main>
       <?php
     require_once("../../connect.php");
-    $sql = "SELECT id_system,osoba,rola FROM System_osoba,System_rola,'System' where System_osoba.id='System'.system_osoba_id and System_rola.id='System'.system_rola_id";
+    $sql = "SELECT id_system,osoba,rola FROM System_osoba,System_rola,Systemm where System_osoba.id=Systemm.system_osoba_id and System_rola.id=Systemm.system_rola_id";
     echo("<br>");
     echo($sql);
     $result = mysqli_query($conn, $sql);

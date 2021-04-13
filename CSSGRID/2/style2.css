@@ -17,6 +17,7 @@
       grid-area: a;
       height: 100vh;
       padding-left: 10px;
+      padding-top: 50%;
       color: black;
   }
   nav {
