@@ -10,19 +10,76 @@
   <body>
     <div class="container">
       <header>
-      1
+      <?php
+    require_once("../../connect.php");
+    $sql = "SELECT * FROM System_osoba";
+    echo("<br>");
+    echo($sql);
+    $result = mysqli_query($conn, $sql);
+    if ( $result) {
+        echo "<li>ok";
+        } else {
+        echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+     }
+    echo('<table border="1">');
+        echo('<th>Id</th><th>Osoba</th>');
+        while($row=mysqli_fetch_assoc($result)){
+            echo('<tr>');
+            echo('<td>'.$row['id'].'</td><td>'.$row['osoba'].'</td>');
+            echo('</tr>');
+     }
+        echo('</table>');
+?>
       </header>
       <nav>
       2
       </nav>
       <main>
-      3
+      <?php
+    require_once("../../connect.php");
+    $sql = "SELECT id_system,osoba,rola FROM System_osoba,System_rola,'System' where System_osoba.id='System'.system_osoba_id and System_rola.id='System'.system_rola_id";
+    echo("<br>");
+    echo($sql);
+    $result = mysqli_query($conn, $sql);
+    if ( $result) {
+        echo "<li>ok";
+        } else {
+        echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+     }
+    echo('<table border="1">');
+        echo('<th>Id</th><th>Osoba</th><th>Rola</th>');
+        while($row=mysqli_fetch_assoc($result)){
+            echo('<tr>');
+            echo('<td>'.$row['id_system'].'</td><td>'.$row['osoba'].'</td><td>'.$row['rola'].'</td>');
+            echo('</tr>');
+     }
+        echo('</table>');
+?>
       </main>
       <footer>
       4
       </footer>
       <aside>
-      5
+      <?php
+    require_once("../../connect.php");
+    $sql = "SELECT * FROM System_rola";
+    echo("<br>");
+    echo($sql);
+    $result = mysqli_query($conn, $sql);
+    if ( $result) {
+        echo "<li>ok";
+        } else {
+        echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+     }
+    echo('<table border="1">');
+        echo('<th>Id</th><th>Rola</th>');
+        while($row=mysqli_fetch_assoc($result)){
+            echo('<tr>');
+            echo('<td>'.$row['id'].'</td><td>'.$row['rola'].'</td>');
+            echo('</tr>');
+     }
+        echo('</table>');
+?>
       </aside>
     </div>
   </body>

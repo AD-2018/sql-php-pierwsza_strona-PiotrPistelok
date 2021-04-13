@@ -50,7 +50,7 @@
         echo('<th>Id</th><th>Artykul</th><th>Producent</th>');
         while($row=mysqli_fetch_assoc($result)){
             echo('<tr>');
-            echo('<td>'.$row['id'].'</td><td>'.$row['artykul'].'</td><td>'.$row['producent'].'</td>');
+            echo('<td>'.$row['id_sklep'].'</td><td>'.$row['artykul'].'</td><td>'.$row['producent'].'</td>');
             echo('</tr>');
      }
         echo('</table>');
