@@ -16,6 +16,8 @@
       background-color: red;
       grid-area: a;
       height: 100vh;
+      padding-left: 10px;
+      color: black;
   }
   nav {
       background-color: lightgreen;
@@ -26,10 +28,14 @@
       background-color: lightskyblue;
       grid-area: c;
       height: 35vh;
+      padding-left: 10px;
+      color: black;
   }
   aside {
       background-color: orange;
       grid-area: e;
+      padding-left: 10px;
+      color: black;
   }
   footer {
       background-color: yellow;
