@@ -35,13 +35,51 @@
       2
       </nav>
       <main>
-      3
+      <?php
+    require_once("../../connect.php");
+    $sql = "SELECT * FROM Firma,Firma_pracownicy,Firma_projekt where ";
+    echo("<br>");
+    echo($sql);
+    $result = mysqli_query($conn, $sql);
+    if ( $result) {
+        echo "<li>ok";
+        } else {
+        echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+     }
+    echo('<table border="1">');
+        echo('<th>Id</th><th>projekt</th>');
+        while($row=mysqli_fetch_assoc($result)){
+            echo('<tr>');
+            echo('<td>'.$row['id'].'</td><td>'.$row['projekt'].'</td>');
+            echo('</tr>');
+     }
+        echo('</table>');
+?>
       </main>
       <footer>
       4
       </footer>
       <aside>
-      5
+      <?php
+    require_once("../../connect.php");
+    $sql = "SELECT * FROM Firma_projekt";
+    echo("<br>");
+    echo($sql);
+    $result = mysqli_query($conn, $sql);
+    if ( $result) {
+        echo "<li>ok";
+        } else {
+        echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+     }
+    echo('<table border="1">');
+        echo('<th>Id</th><th>projekt</th>');
+        while($row=mysqli_fetch_assoc($result)){
+            echo('<tr>');
+            echo('<td>'.$row['id'].'</td><td>'.$row['projekt'].'</td>');
+            echo('</tr>');
+     }
+        echo('</table>');
+?>
       </aside>
     </div>
   </body>

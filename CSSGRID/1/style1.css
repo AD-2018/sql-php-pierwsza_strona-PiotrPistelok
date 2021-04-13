@@ -14,6 +14,8 @@
   }
   header {
       background-color: red;
+      color: white;
+      padding-left: 10px;
       grid-area: a;
       height: 100vh;
   }
@@ -24,11 +26,14 @@
   }
   main {
       background-color: lightskyblue;
+      padding-left: 10px;
       grid-area: c;
       height: 35vh;
   }
   aside {
       background-color: orange;
+      padding-left: 10px;
+      color: white;
       grid-area: e;
   }
   footer {
