@@ -10,6 +10,7 @@
   <body>
     <div class="container">
       <header>
+      <div class="tabela">
       <?php
     require_once("../../connect.php");
     $sql = "SELECT * FROM Sklep_artykuly";
@@ -30,6 +31,7 @@
      }
         echo('</table>');
 ?>
+        </div>
       </header>
       <nav>
       2
