@@ -62,6 +62,7 @@
       4
       </footer>
       <aside>
+      <div class="tabela1">
       <?php
     require_once("../../connect.php");
     $sql = "SELECT * FROM Firma_projekt";
@@ -82,6 +83,7 @@
      }
         echo('</table>');
 ?>
+        </div>
       </aside>
     </div>
   </body>
