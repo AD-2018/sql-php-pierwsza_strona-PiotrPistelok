@@ -15,7 +15,7 @@
   header {
       background-color: red;
       padding-left: 10px;
-      padding-top: 50px;
+      padding-top: 5em;
       grid-area: a;
       height: 100vh;
       color: black;
