@@ -37,7 +37,7 @@
       <main>
       <?php
     require_once("../../connect.php");
-    $sql = "SELECT * FROM Firma,Firma_pracownicy,Firma_projekt where ";
+    $sql = "SELECT id_firma,pracownik,projekt FROM Firma,Firma_pracownicy,Firma_projekt where Firma_pracownik.id=Firma.Firma_pracownik_id and Firma_projekt.id=Firma.Firma_projekt.id";
     echo("<br>");
     echo($sql);
     $result = mysqli_query($conn, $sql);
@@ -47,10 +47,10 @@
         echo "Error: " . $sql . "<br>" . mysqli_error($conn);
      }
     echo('<table border="1">');
-        echo('<th>Id</th><th>projekt</th>');
+        echo('<th>Id</th><th>pracownik</th><th>projekt</th>');
         while($row=mysqli_fetch_assoc($result)){
             echo('<tr>');
-            echo('<td>'.$row['id'].'</td><td>'.$row['projekt'].'</td>');
+            echo('<td>'.$row['id_firma'].'</td><td>'.$row['pracownik'].'</td><td>'.$row['projekt'].'</td>');
             echo('</tr>');
      }
         echo('</table>');

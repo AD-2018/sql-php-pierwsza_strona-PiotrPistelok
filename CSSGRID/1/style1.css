@@ -14,7 +14,6 @@
   }
   header {
       background-color: red;
-      color: white;
       padding-left: 10px;
       grid-area: a;
       height: 100vh;
@@ -33,11 +32,20 @@
   aside {
       background-color: orange;
       padding-left: 10px;
-      color: white;
       grid-area: e;
   }
   footer {
       background-color: yellow;
       grid-area: d;
       height: 30vh;
+  }
+  table, td {
+    border: 1px solid black;
+  }
+  th {
+    text-align: center;
+  }
+  table {
+    border-collapse: collapse;
+    width: 50%;
   }
