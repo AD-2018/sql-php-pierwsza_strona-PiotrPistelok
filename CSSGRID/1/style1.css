@@ -1,9 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
-
-    .tabela1{
-    font-family: 'Montserrat';
-    }
-  .container {
+    .container {
     background-color: rgb(50, 117, 205);
     height: 100vh;
     display: grid;
@@ -45,4 +40,19 @@
   }
   .tabela1 {
       padding-top: 60%;
+  }
+  table, td {
+    border: 1px solid black;
+  }
+  th {
+    background-color: salmon;
+    text-align: center;
+  
+  }
+  table {
+    border-collapse: collapse;
+    width: 50%;
+  }
+  td {
+    padding: 5px;
   }
