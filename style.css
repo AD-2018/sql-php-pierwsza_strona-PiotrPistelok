@@ -57,12 +57,13 @@ ul {
   margin: 10px;
 }
 .nav {
-  
+  float: left;
   margin: 10px;
   height: auto;
   width: auto;
 }
 .strona {
+  float: left;
   background-color: pink;
   margin: 10px;
   width:auto;
