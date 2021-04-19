@@ -37,6 +37,9 @@ a {
   background-color: cyan;
   padding: 7px;
 }
+ul {
+  list-style-type: none;
+}
 .container {
     display: flex;
     flex-wrap: wrap;
