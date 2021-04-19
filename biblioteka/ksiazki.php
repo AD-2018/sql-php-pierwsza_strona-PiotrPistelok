@@ -5,11 +5,9 @@
 <title>Piotr Pistelok</title>
 </head>
 <body>
-    <div class="container">
-        <div class="tytul">
-            <a class="link" href="https://github.com/AD-2018/sql-php-pierwsza_strona-PiotrPistelok">GitHub</a>
-            <h2>Piotr Pistelok nr 9</h2>
-        </div>
+    <div class="tytul">
+        <a class="link" href="https://github.com/AD-2018/sql-php-pierwsza_strona-PiotrPistelok">GitHub</a>
+        <h2>Piotr Pistelok nr 9</h2>
     </div>
     <div class="nav">
         <a class="link" href="../index.php">Strona główna</a>
