@@ -21,8 +21,8 @@ body{
 td {
   padding: 5px;
 }
-.nav1_link {
- margin: 2px;
+a {
+ padding: 7px;
  background-color: white;
  border-radius: 4em;
  color: black;
@@ -30,10 +30,12 @@ td {
  text-align: center;
  width: 50%;
 }
-
+.nav1_link {
+  height: 40px;
+}
 .link:hover{
   background-color: cyan;
-  padding: 1em;
+  padding: 7px;
 }
 .container {
     display: flex;
