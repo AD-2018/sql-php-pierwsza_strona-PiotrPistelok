@@ -22,7 +22,9 @@ td {
   padding: 5px;
 }
 a {
-
+ margin: 2px;
+ background-color: white;
+ border-radius: 4em;
 }
 
 .link:hover{
@@ -45,7 +47,7 @@ a {
   margin: 10px;
 }
 .nav {
-  background-color: palevioletred;
+  
   margin: 10px;
   height: auto;
   width: auto;
