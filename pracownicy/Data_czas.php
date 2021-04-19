@@ -12,8 +12,8 @@
   <div class="nav">
     <?php include_once("../menu2.php");?>
   </div>
-    <div class="strona">
-    <h2>Jestem w Data i czas</h2>
+  <div class="strona">
+  <h2>Jestem w Data i czas</h2>
 <?php
 require_once("../connect.php");
      

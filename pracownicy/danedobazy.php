@@ -12,11 +12,7 @@
         <h2>Piotr Pistelok nr 9</h2>
     </div>
     <div class="nav">
-        <a class="link" href="../index.php">Strona główna</a>
-        <a class="link" href="OrgPracownicy.php">Organizacja Pracownicy</a>
-        <a class="link" href="agreg.php">Funkcje Agregujące</a>
-        <a class="link" href="Data_czas.php">Data i czas</a>
-        <a class="link" href="/flexbox/index.html">Flexbox </a>
+        <?php include_once("../menu2.php");?>
     </div>
     <div class="strona">
 <h3>DODAJ PRACOWNIKA</h3>	
