@@ -5,12 +5,10 @@
 <title>Piotr Pistelok</title>
 </head>
 <body>
-    <div class="container">
-        <div class="tytul">
-            <a class="link" href="https://github.com/AD-2018/sql-php-pierwsza_strona-PiotrPistelok">GitHub</a>
-            <h2>Piotr Pistelok nr 9</h2>
-        </div>
-    </div>
+  <div class="tytul">
+    <a class="link" href="https://github.com/AD-2018/sql-php-pierwsza_strona-PiotrPistelok">GitHub</a>
+    <h2>Piotr Pistelok nr 9</h2>
+  </div>
   <div class="nav">
     <?php include_once("../menu2.php");?>
   </div>
@@ -37,7 +35,7 @@ echo('<table border="1">');
     }
     echo('</table>');
   
-  echo("<br>Wiek poszczególnych pracowników (w latach) z działu serwis<br>");
+    echo("<br>Wiek poszczególnych pracowników (w latach) z działu serwis<br>");
 $sql ="select *,YEAR(curdate())-YEAR(data_urodzenia) AS wiek from pracownicy,organizacja where id_org=dzial and dzial=1";
 echo($sql);
 $result = mysqli_query($conn, $sql);
@@ -55,7 +53,7 @@ echo('<table border="1">');
     }
     echo('</table>');
   
-  echo("<br>Suma lat wszystkich pracowników<br>");
+    echo("<br>Suma lat wszystkich pracowników<br>");
 $sql ="select SUM(YEAR(CURDATE()) - YEAR(data_urodzenia)) as Suma from pracownicy,organizacja where id_org=dzial"; 
 echo($sql);
 $result = mysqli_query($conn, $sql);
@@ -73,7 +71,7 @@ echo('<table border="1">');
     }
     echo('</table>');
   
-  echo("<br>Suma lat pracowników z działu handel<br>");
+    echo("<br>Suma lat pracowników z działu handel<br>");
 $sql ="select SUM(YEAR(CURDATE()) - YEAR(data_urodzenia)) as Suma from pracownicy,organizacja where id_org=dzial and dzial=2";
 echo($sql);
 $result = mysqli_query($conn, $sql);
@@ -91,7 +89,7 @@ echo('<table border="1">');
     }
     echo('</table>');
   
-  echo("<br>Suma lat kobiet<br>");
+    echo("<br>Suma lat kobiet<br>");
     $sql ="select SUM(YEAR(CURDATE()) - YEAR(data_urodzenia)) as Suma from pracownicy,organizacja where id_org=dzial and imie like'%a'"; 
 echo($sql);
 $result = mysqli_query($conn, $sql);
@@ -129,7 +127,7 @@ echo('<table border="1">');
   
     echo("<br>Średnia lat pracowników w poszczególnych działach(wraz z wypisanymi nazwami działów)<br>");
 $sql ="select dzial,nazwa_dzial,AVG(YEAR(CURDATE()) - YEAR(data_urodzenia)) as srednia from pracownicy,organizacja where id_org=dzial group by dzial,nazwa_dzial";
-  echo($sql);
+    echo($sql);
 $result = mysqli_query($conn, $sql);
 if ( $result) {
         echo "<li>ok";
