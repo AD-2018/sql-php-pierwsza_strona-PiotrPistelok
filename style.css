@@ -16,6 +16,7 @@ table {
   border: 1px solid black;
   border-collapse: collapse;
   width: 50%;
+  padding-left: 10px;
 }
 td {
   padding: 5px;
@@ -61,7 +62,6 @@ ul {
   float: left;
   background-color: pink;
   margin: 10px;
-  text-align: center;
   width:auto;
 }
 
