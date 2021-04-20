@@ -39,7 +39,9 @@
         </div>
       </header>
       <nav>
-      2
+      <?php
+        include_once("del.php");
+      ?>
       </nav>
       <main>
       <?php

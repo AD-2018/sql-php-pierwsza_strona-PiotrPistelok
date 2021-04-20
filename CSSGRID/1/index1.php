@@ -10,6 +10,9 @@
   <body>
     <div class="container">
       <header>
+      <ul class="nav1">
+        <li class="nav1_link"> <a class="link" href="../index.html">Powrót</a></li>
+      </ul>
       <div class="tabela1">
       <?php
     require_once("../../connect.php");
