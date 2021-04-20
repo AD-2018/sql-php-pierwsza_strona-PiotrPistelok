@@ -5,11 +5,13 @@
 <title>Piotr Pistelok</title>
 </head>
 <body>
-    <a href="../../index.php">Strona główna</a>
-    <a href="index1.php">Powrót</a>
+    <ul class="nav1">
+        <li class="nav1_link"> <a class="link" href="../../index.php">Menu</a></li>
+        <li class="nav1_link"> <a class="link" href="index1.php">Powrót</a></li>
+    </ul>
 <?php
 echo ("<br>"."<br>");
-require_once("../connect.php");
+require_once("../../connect.php");
 
 $sql = "DELETE FROM Firma_pracownik WHERE id=".$_POST['id'];
 echo $sql;
