@@ -11,9 +11,11 @@
   <body>
     <div class="container">
       <header>
+      <div class="powrot">
       <ul class="nav1">
         <li class="nav1_link"> <a class="link" href="../index.html">Powrót</a></li>
       </ul>
+      </div>
       <div class="tabela1">
       <?php
     require_once("../../connect.php");
