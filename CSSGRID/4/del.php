@@ -1,16 +1,16 @@
 <?php
-    echo('<h3>Usun artykul</h3>');
-        echo('<form action="delartykul.php" method="POST">');
+    echo('<h3>Usun role</h3>');
+        echo('<form action="delrola.php" method="POST">');
             echo('<label>ID</label><input type="number" name="id"></br>');
             echo('<input type="submit" value="Usuń">');
         echo('</form>');
-    echo('<h3>Usun producenta</h3>');
-        echo('<form action="delproducent.php" method="POST">');
+    echo('<h3>Usun osobe</h3>');
+        echo('<form action="delosoba.php" method="POST">');
             echo('<label>ID</label><input type="number" name="id"></br>');
             echo('<input type="submit" value="Usuń">');
         echo('</form>');
     echo('<h3>Usun all</h3>');
-        echo('<form action="delsklep.php" method="POST">');
+        echo('<form action="delsystem.php" method="POST">');
             echo('<label>ID</label><input type="number" name="id"></br>');
             echo('<input type="submit" value="Usuń">');
         echo('</form>');

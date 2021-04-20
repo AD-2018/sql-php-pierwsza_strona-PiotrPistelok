@@ -5,11 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <link rel="stylesheet" href="style3.css">
+    <link rel="stylesheet" href="../../style.css">
     <title>CSS Grid</title>
   </head>
   <body>
     <div class="container">
       <header>
+      <ul class="nav1">
+        <li class="nav1_link"> <a class="link" href="../index.html">Powrót</a></li>
+      </ul>
       <div class="tabela">
       <?php
     require_once("../../connect.php");
@@ -26,7 +30,12 @@
         echo('<th>Id</th><th>Artykul</th>');
         while($row=mysqli_fetch_assoc($result)){
             echo('<tr>');
-            echo('<td>'.$row['id'].'</td><td>'.$row['artykul'].'</td>');
+            echo('<td>'.$row['id'].'</td><td>'.$row['artykul'].'</td>'.'<td>
+            <form action="delartykul.php" method="POST">
+            <input type="number" name="id" value="'.$row['id'].'" hidden>
+            <input type="submit" value="X">
+            </form>
+            </td>');
             echo('</tr>');
      }
         echo('</table>');
@@ -34,7 +43,9 @@
         </div>
       </header>
       <nav>
-      2
+      <?php
+      require_once("del.php");
+      ?>
       </nav>
       <main>
       <?php
@@ -52,7 +63,12 @@
         echo('<th>Id</th><th>Artykul</th><th>Producent</th>');
         while($row=mysqli_fetch_assoc($result)){
             echo('<tr>');
-            echo('<td>'.$row['id_sklep'].'</td><td>'.$row['artykul'].'</td><td>'.$row['producent'].'</td>');
+            echo('<td>'.$row['id_sklep'].'</td><td>'.$row['artykul'].'</td><td>'.$row['producent'].'</td>'.'<td>
+            <form action="delsklep.php" method="POST">
+            <input type="number" name="id" value="'.$row['id_sklep'].'" hidden>
+            <input type="submit" value="X">
+            </form>
+            </td>');
             echo('</tr>');
      }
         echo('</table>');
@@ -77,7 +93,13 @@
         echo('<th>Id</th><th>Producent</th>');
         while($row=mysqli_fetch_assoc($result)){
             echo('<tr>');
-            echo('<td>'.$row['id'].'</td><td>'.$row['producent'].'</td>');
+            echo('<td>'.$row['id'].'</td><td>'.$row['producent'].'</td>'.'<td>
+            <form action="delproducent.php" method="POST">
+            <input type="number" name="id" value="'.$row['id'].'" hidden>
+            <input type="submit" value="X">
+            </form>
+            </td>');
+            echo('</tr>');
             echo('</tr>');
      }
         echo('</table>');

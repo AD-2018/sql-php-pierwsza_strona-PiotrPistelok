@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <link rel="stylesheet" href="style4.css">
+    <link rel="stylesheet" href="../../style.css">
     <title>CSS Grid</title>
   </head>
   <body>
@@ -25,14 +26,21 @@
         echo('<th>Id</th><th>Osoba</th>');
         while($row=mysqli_fetch_assoc($result)){
             echo('<tr>');
-            echo('<td>'.$row['id'].'</td><td>'.$row['osoba'].'</td>');
+            echo('<td>'.$row['id'].'</td><td>'.$row['osoba'].'</td>'.'<td>
+            <form action="delosoba.php" method="POST">
+            <input type="number" name="id" value="'.$row['id'].'" hidden>
+            <input type="submit" value="X">
+            </form>
+            </td>');
             echo('</tr>');
      }
         echo('</table>');
 ?>
       </header>
       <nav>
-      2
+      <ul class="nav1">
+        <li class="nav1_link"> <a class="link" href="../index.html">Powrót</a></li>
+      </ul>
       </nav>
       <main>
       <?php
@@ -50,14 +58,21 @@
         echo('<th>Id</th><th>Osoba</th><th>Rola</th>');
         while($row=mysqli_fetch_assoc($result)){
             echo('<tr>');
-            echo('<td>'.$row['id_system'].'</td><td>'.$row['osoba'].'</td><td>'.$row['rola'].'</td>');
+            echo('<td>'.$row['id_system'].'</td><td>'.$row['osoba'].'</td><td>'.$row['rola'].'</td>'.'<td>
+            <form action="delsystem.php" method="POST">
+            <input type="number" name="id" value="'.$row['id_system'].'" hidden>
+            <input type="submit" value="X">
+            </form>
+            </td>');
             echo('</tr>');
      }
         echo('</table>');
 ?>
       </main>
       <footer>
-      4
+      <?php
+      require_once("del.php");
+      ?>
       </footer>
       <aside>
       <?php
@@ -75,7 +90,12 @@
         echo('<th>Id</th><th>Rola</th>');
         while($row=mysqli_fetch_assoc($result)){
             echo('<tr>');
-            echo('<td>'.$row['id'].'</td><td>'.$row['rola'].'</td>');
+            echo('<td>'.$row['id'].'</td><td>'.$row['rola'].'</td>'.'<td>
+            <form action="delrola.php" method="POST">
+            <input type="number" name="id" value="'.$row['id'].'" hidden>
+            <input type="submit" value="X">
+            </form>
+            </td>');
             echo('</tr>');
      }
         echo('</table>');

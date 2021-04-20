@@ -5,11 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <link rel="stylesheet" href="style2.css">
+    <link rel="stylesheet" href="../../style.css">
     <title>CSS Grid</title>
   </head>
   <body>
     <div class="container">
       <header>
+      <ul class="nav1">
+        <li class="nav1_link"> <a class="link" href="../index.html">Powrót</a></li>
+      </ul>
       <div class="tabela">
       <?php
     require_once("../../connect.php");
