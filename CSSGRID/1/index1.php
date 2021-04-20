@@ -26,7 +26,12 @@
         echo('<th>Id_pracownika</th><th>imię</th>');
         while($row=mysqli_fetch_assoc($result)){
             echo('<tr>');
-            echo('<td>'.$row['id'].'</td><td>'.$row['pracownik'].'</td>');
+            echo('<td>'.$row['id'].'</td><td>'.$row['pracownik'].'</td>'.'<td>
+            <form action="delprac.php" method="POST">
+            <input type="number" name="id" value="'.$row['id'].'" hidden>
+            <input type="submit" value="X">
+            </form>
+            </td>');
             echo('</tr>');
      }
         echo('</table>');
@@ -52,7 +57,12 @@
         echo('<th>Id</th><th>pracownik</th><th>projekt</th>');
         while($row=mysqli_fetch_assoc($result)){
             echo('<tr>');
-            echo('<td>'.$row['id_firma'].'</td><td>'.$row['pracownik'].'</td><td>'.$row['projekt'].'</td>');
+            echo('<td>'.$row['id_firma'].'</td><td>'.$row['pracownik'].'</td><td>'.$row['projekt'].'</td>'.'<td>
+            <form action="delfirma.php" method="POST">
+            <input type="number" name="id" value="'.$row['id_firma'].'" hidden>
+            <input type="submit" value="X">
+            </form>
+            </td>');
             echo('</tr>');
      }
         echo('</table>');
@@ -78,7 +88,12 @@
         echo('<th>Id</th><th>projekt</th>');
         while($row=mysqli_fetch_assoc($result)){
             echo('<tr>');
-            echo('<td>'.$row['id'].'</td><td>'.$row['projekt'].'</td>');
+            echo('<td>'.$row['id'].'</td><td>'.$row['projekt'].'</td>'.'<td>
+            <form action="delprojekt.php" method="POST">
+            <input type="number" name="id" value="'.$row['id'].'" hidden>
+            <input type="submit" value="X">
+            </form>
+            </td>');
             echo('</tr>');
      }
         echo('</table>');
