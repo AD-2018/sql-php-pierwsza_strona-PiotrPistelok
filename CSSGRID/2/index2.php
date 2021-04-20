@@ -26,7 +26,12 @@
         echo('<th>Id</th><th>Prawnik</th>');
         while($row=mysqli_fetch_assoc($result)){
             echo('<tr>');
-            echo('<td>'.$row['id'].'</td><td>'.$row['prawnik'].'</td>');
+            echo('<td>'.$row['id'].'</td><td>'.$row['prawnik'].'</td>'.'<td>
+            <form action="delprawnik.php" method="POST">
+            <input type="number" name="id" value="'.$row['id'].'" hidden>
+            <input type="submit" value="X">
+            </form>
+            </td>');
             echo('</tr>');
      }
         echo('</table>');
@@ -52,7 +57,12 @@
         echo('<th>Id</th><th>prawnik</th><th>Sprawa</th>');
         while($row=mysqli_fetch_assoc($result)){
             echo('<tr>');
-            echo('<td>'.$row['id_kancelaria'].'</td><td>'.$row['prawnik'].'</td><td>'.$row['sprawa'].'</td>');
+            echo('<td>'.$row['id_kancelaria'].'</td><td>'.$row['prawnik'].'</td><td>'.$row['sprawa'].'</td>'.'<td>
+            <form action="delkanc.php" method="POST">
+            <input type="number" name="id" value="'.$row['id_kancelaria'].'" hidden>
+            <input type="submit" value="X">
+            </form>
+            </td>');
             echo('</tr>');
      }
         echo('</table>');
@@ -77,7 +87,12 @@
         echo('<th>Id</th><th>Sprawa</th>');
         while($row=mysqli_fetch_assoc($result)){
             echo('<tr>');
-            echo('<td>'.$row['id'].'</td><td>'.$row['sprawa'].'</td>');
+            echo('<td>'.$row['id'].'</td><td>'.$row['sprawa'].'</td>'.'<td>
+            <form action="delsprawa.php" method="POST">
+            <input type="number" name="id" value="'.$row['id'].'" hidden>
+            <input type="submit" value="X">
+            </form>
+            </td>');
             echo('</tr>');
      }
         echo('</table>');
